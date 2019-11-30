@@ -54,7 +54,7 @@ public class AdminController {
         }
         else if(login(txtUsername.getText(),txtPassword.getText())){
             txtAreaFeedback.setText("Successful Login");
-            Main.set_pane(2);
+            Main.set_pane(5);
         }
         else {
 

@@ -371,6 +371,10 @@ public class PropertyController implements Initializable {
         Main.set_pane(4);
     }
 
+    public void handleSystemExitBtn(ActionEvent e) throws Exception{
+        System.exit(0);
+    }
+
     ObservableList<String> categories = FXCollections.observableArrayList("Any", "Apartment", "Semi-Detached House", "Industrial", "Attached House", "Detached House");
 
     ObservableList<String> locations = FXCollections.observableArrayList("Any", "Co.Waterford", "Co.Kilkenny", "Co.Cork", "Co.Limerick");

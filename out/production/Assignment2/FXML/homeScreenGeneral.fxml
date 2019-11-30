@@ -42,7 +42,7 @@
                            <items>
                               <MenuItem mnemonicParsing="false" text="Load Properties" />
                               <MenuItem mnemonicParsing="false" text="Display Properties" />
-                              <MenuItem mnemonicParsing="false" text="Exit System" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleSystemExitBtn" text="Exit System" />
                            </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Account">

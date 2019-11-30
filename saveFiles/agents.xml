@@ -2,15 +2,26 @@
   <ApplicationModels.LinkListObjects>
     <first>
       <data class="ApplicationModels.propertyAgent">
-        <username>davinfortune</username>
+        <username>happyDays</username>
         <password>1234</password>
-        <agentId>WX1234</agentId>
-        <location>Co.Waterford</location>
-        <name>Davin Fortune</name>
+        <agentId>KK1234</agentId>
+        <location>Co.Kilkenny</location>
+        <name>Happy Days</name>
         <phoneNumber>830501771</phoneNumber>
       </data>
+      <next>
+        <data class="ApplicationModels.propertyAgent">
+          <username>davinfortune</username>
+          <password>1234</password>
+          <agentId>WX1234</agentId>
+          <location>Co.Waterford</location>
+          <name>Davin Fortune</name>
+          <phoneNumber>830501771</phoneNumber>
+        </data>
+        <outer-class reference="../../.."/>
+      </next>
       <outer-class reference="../.."/>
     </first>
-    <length>1</length>
+    <length>2</length>
   </ApplicationModels.LinkListObjects>
 </object-stream>

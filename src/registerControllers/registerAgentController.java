@@ -57,7 +57,7 @@ public class registerAgentController implements Initializable{
         } else if (!txtPassword.getText().equals(txtRepeatPassword.getText())) {
             txtAreaFeedback.setText("Password must match RepeatPassword");
         } else if (addAgent(txtUsername.getText(), txtPassword.getText(), txtAgentID.getText(), locationGeneralSelect.getValue(), txtFullName.getText(), phoneNumber)) {
-            Main.set_pane(0);
+            Main.set_pane(2);
             txtAreaFeedback.setText("Successful Registration");
         }
     }
