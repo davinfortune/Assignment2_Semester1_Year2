@@ -1,0 +1,15 @@
+<object-stream>
+  <ApplicationModels.LinkListObjects>
+    <first>
+      <data class="ApplicationModels.propertyAdmin">
+        <name>Davin Fortune</name>
+        <adminId>WX1234</adminId>
+        <username>davinfortune</username>
+        <password>1234</password>
+        <masterAdminPassword>root</masterAdminPassword>
+      </data>
+      <outer-class reference="../.."/>
+    </first>
+    <length>1</length>
+  </ApplicationModels.LinkListObjects>
+</object-stream>

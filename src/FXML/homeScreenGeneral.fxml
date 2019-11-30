@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.PropertyController">
+   <children>
+      <BorderPane layoutY="3.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="13.0" layoutY="30.0" prefHeight="35.0" prefWidth="121.0" text="Davt.ie">
+                     <font>
+                        <Font name="Britannic Bold" size="36.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient cycleMethod="REPEAT" endX="0.01904761904761909" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#d05c5c" />
+                              <Stop color="#f79191" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <MenuBar layoutY="-3.0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Load Properties" />
+                              <MenuItem mnemonicParsing="false" text="Display Properties" />
+                              <MenuItem mnemonicParsing="false" text="Exit System" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Account">
+                           <items>
+                              <Menu mnemonicParsing="false" text="Admin">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#handleLoginAdminButton" text="Login" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleRegisterAdminButton" text="Register" />
+                                 </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Agent">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#handleRegisterAgentButton" text="Login" />
+                                 </items>
+                              </Menu>
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <TextArea fx:id="txtFeedBack" accessibleRole="TEXT" editable="false" layoutX="518.0" layoutY="14.0" prefHeight="56.0" prefWidth="155.0">
+                     <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                     </cursor>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <HBox prefHeight="388.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="388.0" prefWidth="613.0">
+                     <children>
+                        <HBox prefHeight="391.0" prefWidth="199.0" />
+                     </children>
+                  </Pane>
+               </children></HBox>
+         </bottom>
+         <left>
+            <Pane prefHeight="71.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="locationGeneralSelect" layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="County" style="-fx-background-color: #DCDCDC;" />
+                  <ComboBox fx:id="minPriceSelect" layoutX="208.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
+                  <ComboBox fx:id="maxPriceSelect" layoutX="312.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
+                  <ComboBox fx:id="categorySelect" layoutX="423.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
+                  <Button layoutX="621.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleAddPropertyButton" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

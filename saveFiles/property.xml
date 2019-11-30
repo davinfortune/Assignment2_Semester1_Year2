@@ -1,0 +1,61 @@
+<object-stream>
+  <ApplicationModels.LinkListObjects>
+    <first>
+      <data class="ApplicationModels.Property">
+        <propertyId>12344</propertyId>
+        <description>12234</description>
+        <address>213451252345</address>
+        <category>Apartment</category>
+        <locationGeneral>Co.Cork</locationGeneral>
+        <locationSpecific>32453245</locationSpecific>
+        <BER>23453452</BER>
+        <eircode>34523453421</eircode>
+        <price>2223.0</price>
+      </data>
+      <next>
+        <data class="ApplicationModels.Property">
+          <propertyId>12354</propertyId>
+          <description>13245</description>
+          <address>12345</address>
+          <category>Apartment</category>
+          <locationGeneral>Co.Waterford</locationGeneral>
+          <locationSpecific>12345</locationSpecific>
+          <BER>12345</BER>
+          <eircode>12345</eircode>
+          <price>123432.0</price>
+        </data>
+        <next>
+          <data class="ApplicationModels.Property">
+            <propertyId>123554</propertyId>
+            <description>SSSS</description>
+            <address>SSSS</address>
+            <category>Apartment</category>
+            <locationGeneral>Co.Waterford</locationGeneral>
+            <locationSpecific>SSS</locationSpecific>
+            <BER>SSSS</BER>
+            <eircode>SSSS</eircode>
+            <price>1342.0</price>
+          </data>
+          <next>
+            <data class="ApplicationModels.Property">
+              <propertyId>12345</propertyId>
+              <description>DDD</description>
+              <address>DDDD</address>
+              <category>Apartment</category>
+              <locationGeneral>Co.Waterford</locationGeneral>
+              <locationSpecific>DDDD</locationSpecific>
+              <BER>DD</BER>
+              <eircode>DDDD</eircode>
+              <price>12345.0</price>
+            </data>
+            <outer-class reference="../../../../.."/>
+          </next>
+          <outer-class reference="../../../.."/>
+        </next>
+        <outer-class reference="../../.."/>
+      </next>
+      <outer-class reference="../.."/>
+    </first>
+    <length>4</length>
+  </ApplicationModels.LinkListObjects>
+</object-stream>

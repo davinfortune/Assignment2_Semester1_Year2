@@ -1,0 +1,16 @@
+<object-stream>
+  <ApplicationModels.LinkListObjects>
+    <first>
+      <data class="ApplicationModels.propertyAgent">
+        <username>davinfortune</username>
+        <password>1234</password>
+        <agentId>WX1234</agentId>
+        <location>Co.Waterford</location>
+        <name>Davin Fortune</name>
+        <phoneNumber>830501771</phoneNumber>
+      </data>
+      <outer-class reference="../.."/>
+    </first>
+    <length>1</length>
+  </ApplicationModels.LinkListObjects>
+</object-stream>
