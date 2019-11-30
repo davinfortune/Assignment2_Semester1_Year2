@@ -1,7 +1,8 @@
 package Application;
 
 import ApplicationModels.LinkListObjects;
-import ApplicationModels.propertyAgent;
+import ApplicationModels.Property;
+import ApplicationModels.propertyAdmin;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
@@ -44,8 +45,9 @@ public class AdminController {
     private TextArea txtListDetailAgent;
     @FXML
     private TextArea txtListAllAgents;
-    @FXML
-    LinkListObjects agents;
+
+    LinkListObjects admins = new LinkListObjects();
+
     public void handleLoginBtn(ActionEvent e) throws Exception {
         if(txtUsername.getText().length()<4 || txtPassword.getText().length()<4 ){
             txtAreaFeedback.setText("Username and Password need \nto be 4 characters or more");
@@ -55,7 +57,7 @@ public class AdminController {
             Main.set_pane(2);
         }
         else {
-            txtAreaFeedback.setText("Un-Successful Login");
+
             txtPassword.clear();
         }
     }
@@ -63,12 +65,12 @@ public class AdminController {
     private boolean login(String username, String password) {
         XStream xstream = new XStream(new DomDriver());
         try {
-            ObjectInputStream is = xstream.createObjectInputStream(new FileReader("safeFiles/agents.xml"));
-            agents = (LinkListObjects) is.readObject();
+            ObjectInputStream is = xstream.createObjectInputStream(new FileReader("saveFiles/admins.xml"));
+            admins = (LinkListObjects) is.readObject();
             is.close();
         }
         catch(FileNotFoundException e) {
-            agents =  new LinkListObjects();
+            admins =  new LinkListObjects();
             txtAreaFeedback.setText("Password File not located\n" + e);
             return false;
 
@@ -78,8 +80,9 @@ public class AdminController {
             return false;
         }
 
-        for (int i = 0; i < agents.size(); i++) {
-            if (agents.get(i).toString().contains(username) && agents.get(i).toString().contains(password))
+        for (int i = 0; i < admins.size(); i++) {
+            propertyAdmin adminLogin = (propertyAdmin) admins.get(i);
+            if (adminLogin.getUsername().contains(username) && adminLogin.getPassword().contains(password))
                 return true;
         }
         return false;

@@ -1,6 +1,8 @@
 package ApplicationModels;
 
-public class LinkListObjects{
+import Interfaces.MyListOfObjectsInterface;
+
+public class LinkListObjects implements MyListOfObjectsInterface{
     Node first;
     int length;
 
