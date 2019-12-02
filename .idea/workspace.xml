@@ -8,14 +8,15 @@
       <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/Application/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Application/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/Application/PropertyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenGeneral.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenGeneral.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAgentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAgentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFiles/agents.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saveFiles/agents.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/MethodModels/propertyModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/MethodModels/propertyModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/AgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/AgentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Application/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PropertyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FXML/homeScreenGeneral.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/homeScreenGeneral.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registerControllers/registerAgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerControllers/registerAgentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MethodModels/propertyModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MethodModels/propertyModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/registerControllers/registerAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerControllers/registerAdminController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,12 +103,13 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575051114772" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment1_Semester1_Year2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />

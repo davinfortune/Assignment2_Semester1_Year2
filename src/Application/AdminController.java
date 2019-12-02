@@ -1,7 +1,6 @@
 package Application;
 
 import ApplicationModels.LinkListObjects;
-import ApplicationModels.Property;
 import ApplicationModels.propertyAdmin;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;

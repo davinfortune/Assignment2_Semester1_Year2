@@ -5,6 +5,8 @@ import ApplicationModels.Property;
 import javafx.application.Application;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import javafx.fxml.FXML;
+
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
@@ -36,6 +38,23 @@ public class propertyModel {
                 return false;
             }
         }
+    }
+
+    public String listDetailProperties(int index) {
+        String displayDetail;
+        Property listProperty = (Property) property.get(index);
+        displayDetail = " Property Number " + index + ": \n" + listProperty;
+        return displayDetail;
+    }
+
+    public String listAllLowDetailProperties() {
+        String displayPropertys ="";
+        for(int i = 0; i < property.size(); i++){
+            Property listProperty = (Property) property.get(i);
+            displayPropertys += "\nProperty Number "+ i + ": \n" + listProperty.getAddress() + "\n" + listProperty.getLocationGeneral() + "\n" +
+                    "€" + listProperty.getPrice() + "\n";
+    }
+        return displayPropertys;
     }
 
     public void loadProperty() throws Exception {

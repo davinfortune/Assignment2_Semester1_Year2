@@ -46,7 +46,7 @@ public class registerAdminController {
     }
 
     private boolean register(String username, String password, String adminID, String fullName) {
-        LinkListObjects admins;
+        LinkListObjects admins = new LinkListObjects();
         XStream xstream = new XStream(new DomDriver());
         try {
             ObjectInputStream is = xstream.createObjectInputStream(new FileReader("safeFiles/admins.xml"));

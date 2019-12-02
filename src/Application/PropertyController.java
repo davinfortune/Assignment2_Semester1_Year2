@@ -346,15 +346,6 @@ public class PropertyController implements Initializable {
      }
     }
 
-/*    public void handleListDetailsButton(ActionEvent e) throws Exception {
-        try {
-            txtlistAllProperties.setText(property.listDetailProperties(Integer.parseInt(txtDeleteIndex.getText())));
-        }
-        catch (Exception t){
-            txtFeedBack.setText("Invalid value Entered");
-        }
-    }*/
-
     public void handleAddPropertyButton(ActionEvent e) throws Exception{
         Main.set_pane(1);
     }
@@ -373,6 +364,14 @@ public class PropertyController implements Initializable {
 
     public void handleSystemExitBtn(ActionEvent e) throws Exception{
         System.exit(0);
+    }
+
+    public void handleLoginAgentBtn(ActionEvent e) throws Exception{
+        Main.set_pane(6);
+    }
+
+    public void handleLogOutBtn(ActionEvent e) throws Exception{
+        Main.set_pane(0);
     }
 
     ObservableList<String> categories = FXCollections.observableArrayList("Any", "Apartment", "Semi-Detached House", "Industrial", "Attached House", "Detached House");

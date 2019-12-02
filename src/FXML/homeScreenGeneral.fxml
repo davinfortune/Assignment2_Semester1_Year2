@@ -7,6 +7,8 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -55,7 +57,7 @@
                               </Menu>
                               <Menu mnemonicParsing="false" text="Agent">
                                  <items>
-                                    <MenuItem mnemonicParsing="false" onAction="#handleRegisterAgentButton" text="Login" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleLoginAgentBtn" text="Login" />
                                  </items>
                               </Menu>
                            </items>
@@ -79,6 +81,15 @@
                   <Pane prefHeight="388.0" prefWidth="613.0">
                      <children>
                         <HBox prefHeight="391.0" prefWidth="199.0" />
+                        <TableView layoutX="7.0" layoutY="6.0" prefHeight="371.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
+                          <columns>
+                            <TableColumn prefWidth="94.0" text="ID" />
+                            <TableColumn minWidth="7.0" prefWidth="127.0" text="Price" />
+                              <TableColumn minWidth="0.0" prefWidth="92.0" text="County" />
+                              <TableColumn prefWidth="205.0" text="Address" />
+                              <TableColumn prefWidth="81.0" text="Eircode" />
+                          </columns>
+                        </TableView>
                      </children>
                   </Pane>
                </children></HBox>
