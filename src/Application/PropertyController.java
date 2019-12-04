@@ -1,11 +1,13 @@
 package Application;
 
 
+import ApplicationModels.Property;
 import MethodModels.propertyModel;
 import ApplicationModels.LinkListObjects;
 
 import java.io.*;
 import java.net.URL;
+import java.rmi.server.ExportException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
@@ -19,10 +21,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import javax.swing.*;
 
@@ -68,6 +68,18 @@ public class PropertyController implements Initializable {
     private ComboBox<String> minPriceSelect = new ComboBox<>();
     @FXML
     private ComboBox<String> maxPriceSelect = new ComboBox<>();
+    @FXML
+    private TableView tblView;
+    @FXML
+    private TableColumn<Property, Integer> idColumn;
+    @FXML
+    private TableColumn<Property, Double> priceColumn;
+    @FXML
+    private TableColumn<Property, String> countyColumn;
+    @FXML
+    private TableColumn<Property, String> addressColumn;
+    @FXML
+    private TableColumn<Property, String> eircodeColumn;
 
     public void handleReadBtn(ActionEvent e) {
 
@@ -200,142 +212,26 @@ public class PropertyController implements Initializable {
         txtAreaPropertyInfo.setText(property.listAllLowDetailProperties());
     }*/
 
-  /*  public void handleSearchButton(ActionEvent e) throws Exception {
-        if (property.propertys.size() == 0) {
-            try {
-                property.loadProperty();
-            } catch (Exception z) {
-                txtFeedBack.setText("No Properties to Load");
-            }
-        }
 
-        if (minPriceSelect.getValue() == "No Min" && maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() != "Any" && locationGeneralSelect.getValue() != "Any") {
-            category = categorySelect.getValue();
-            locationGeneral = locationGeneralSelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyPropertyType(locationGeneral, category));
-        }
+    public void handleSearchButton(ActionEvent e) throws Exception {
+        String category = categorySelect.getValue();
+        String location = locationGeneralSelect.getValue();
+        String minPrice = minPriceSelect.getValue();
+        String maxPrice = maxPriceSelect.getValue();
 
-        if (maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() != "Any") {
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            locationGeneral = locationGeneralSelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyMin(locationGeneral, minimumPrice));
-        }
+        ArrayList<Property>tempProperty = new ArrayList<>();
+        tempProperty = property.propertySearch(category, location, minPrice, maxPrice);
 
-        if (maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() != "Any") {
-            locationGeneral = locationGeneralSelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCounty(locationGeneral));
-        }
+        ObservableList<Property> Newdata = FXCollections.observableArrayList(tempProperty);
 
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() != "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            locationGeneral = locationGeneralSelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyMax(locationGeneral, maximumPrice));
-        }
+        idColumn.setCellValueFactory(new PropertyValueFactory<Property, Integer>("propertyId"));
+        priceColumn.setCellValueFactory(new PropertyValueFactory<Property, Double>("price"));
+        countyColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("locationGeneral"));
+        addressColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("address"));
+        eircodeColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("eircode"));
 
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() != "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            if (minimumPrice > maximumPrice) {
-                txtFeedBack.setText("Please Check you Minimum\nand Maximum values are correct");
-            } else {
-                locationGeneral = locationGeneralSelect.getValue();
-                txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyMinMax(locationGeneral, minimumPrice, maximumPrice));
-            }
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() != "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            if (minimumPrice > maximumPrice) {
-                txtFeedBack.setText("Please Check you Minimum\nand Maximum values are correct");
-            } else {
-                category = categorySelect.getValue();
-                locationGeneral = locationGeneralSelect.getValue();
-                txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyMinMaxType(locationGeneral, minimumPrice, maximumPrice, category));
-            }
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() == "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            if (minimumPrice > maximumPrice) {
-                txtFeedBack.setText("Please Check you Minimum\nand Maximum values are correct");
-            } else {
-                txtAreaPropertyInfo.setText(property.listAllPropertiesSearchMinMax(minimumPrice, maximumPrice));
-            }
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() == "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            if (minimumPrice > maximumPrice) {
-                txtFeedBack.setText("Please Check you Minimum\nand Maximum values are correct");
-            } else {
-                category = categorySelect.getValue();
-                txtAreaPropertyInfo.setText(property.listAllPropertiesSearchMinMaxType(minimumPrice, maximumPrice,category));
-            }
-        }
-
-        if (maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() == "Any") {
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            category = categorySelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchMinType(minimumPrice, category));
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() == "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            category = categorySelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchMaxType(maximumPrice, category));
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() != "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            category = categorySelect.getValue();
-            locationGeneral = locationGeneralSelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyMaxType(locationGeneral,maximumPrice, category));
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() == "Any") {
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchMax(minimumPrice));
-        }
-
-        if (maxPriceSelect.getValue() != "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() == "Any") {
-            max = maxPriceSelect.getValue();
-            double maximumPrice = Double.parseDouble(max);
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchMin(maximumPrice));
-        }
-
-        if (maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() == "Any") {
-            category = categorySelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchType(category));
-        }
-
-        if (maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() != "Any" && minPriceSelect.getValue() != "No Min" && locationGeneralSelect.getValue() != "Any") {
-            min = minPriceSelect.getValue();
-            double minimumPrice = Double.parseDouble(min);
-            category = categorySelect.getValue();
-            locationGeneral = locationGeneralSelect.getValue();
-            txtAreaPropertyInfo.setText(property.listAllPropertiesSearchCountyMinType(locationGeneral,minimumPrice, category));
-        }
-        if(maxPriceSelect.getValue() == "No Max" && categorySelect.getValue() == "Any" && minPriceSelect.getValue() == "No Min" && locationGeneralSelect.getValue() == "Any"){
-            txtAreaPropertyInfo.setText(property.listAllLowDetailProperties());
-        }
-    }*/
+        tblView.setItems(Newdata);
+    }
 
     public void handleLoadPropertyBtn(ActionEvent e) throws Exception {
      try{
@@ -386,6 +282,38 @@ public class PropertyController implements Initializable {
     @Override
 
     public void initialize(URL location, ResourceBundle resources) {
+
+        try {
+            LinkListObjects tempPropertys;
+            ArrayList<Property> tableProperty = new ArrayList<>();
+            XStream xstream = new XStream(new DomDriver());
+            ObjectInputStream is = xstream.createObjectInputStream
+                    (new FileReader("saveFiles/property.xml"));
+            tempPropertys = (LinkListObjects) is.readObject();
+            is.close();
+            for (int i = 0; i < tempPropertys.size(); i++) {
+                Property forProperty = (Property) tempPropertys.get(i);
+                tableProperty.add(forProperty);
+            }
+
+            ObservableList<Property> data = FXCollections.observableArrayList(tableProperty);
+
+            idColumn.setCellValueFactory(new PropertyValueFactory<Property, Integer>("propertyId"));
+            priceColumn.setCellValueFactory(new PropertyValueFactory<Property, Double>("price"));
+            countyColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("locationGeneral"));
+            addressColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("address"));
+            eircodeColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("eircode"));
+
+
+
+            tblView.setItems(data);
+        }
+
+        catch (Exception e){
+            txtFeedBack.setText("Could Not Load Propertys");
+        }
+
+
 
         property = new propertyModel();
 

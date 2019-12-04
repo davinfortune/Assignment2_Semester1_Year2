@@ -57,6 +57,52 @@ public class propertyModel {
         return displayPropertys;
     }
 
+    public ArrayList<Property> propertySearch(String propertyType, String location, String minPrice, String maxPrice) {
+
+         LinkListObjects tempPropertys = new LinkListObjects();
+         ArrayList<Property> tableProperty = new ArrayList<>();
+         try {
+             XStream xstream = new XStream(new DomDriver());
+             ObjectInputStream is = xstream.createObjectInputStream
+                     (new FileReader("saveFiles/property.xml"));
+             tempPropertys = (LinkListObjects) is.readObject();
+             is.close();
+         }
+         catch (Exception e){
+
+         }
+
+        for (int i = 0; i < tempPropertys.size(); i++) {
+            Property forProperty = (Property) tempPropertys.get(i);
+            tableProperty.add(forProperty);
+        }
+
+        if (propertyType == "Any" && location =="Any" && minPrice == "No Min" && maxPrice == "No Max"){
+            return tableProperty;
+        }
+        else {
+            ArrayList<Property> searchResults = new ArrayList<>();
+
+            for (int i = 0; i < tableProperty.size(); i++) {
+
+                if (propertyType.equals("Any") && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice.equals("No Min") && maxPrice.equals("No Max")) {
+                    searchResults.add(tableProperty.get(i));
+                } else if (location.equals("Any") && tableProperty.get(i).getCategory().equals(propertyType) && minPrice.equals("No Min") && maxPrice.equals("No Max")) {
+                    searchResults.add(tableProperty.get(i));
+                } else if (tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice.equals("No Min") && maxPrice.equals("No Max")) {
+                    searchResults.add(tableProperty.get(i));
+                } else if (tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice != "No Min" && maxPrice.equals("No Max")) {
+                    int price = Integer.parseInt(Double.toString(tableProperty.get(i).getPrice()));
+                    if (price > Integer.parseInt(minPrice)) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+
+            }
+            return searchResults;
+        }
+    }
+    
     public void loadProperty() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectInputStream is = xstream.createObjectInputStream
