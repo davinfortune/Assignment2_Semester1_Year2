@@ -92,13 +92,101 @@ public class propertyModel {
                 } else if (tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice.equals("No Min") && maxPrice.equals("No Max")) {
                     searchResults.add(tableProperty.get(i));
                 } else if (tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice != "No Min" && maxPrice.equals("No Max")) {
-                    int price = Integer.parseInt(Double.toString(tableProperty.get(i).getPrice()));
-                    if (price > Integer.parseInt(minPrice)) {
+                    double price = tableProperty.get(i).getPrice();
+                    double checker = Double.parseDouble(minPrice);
+                    if (price > checker) {
                         searchResults.add(tableProperty.get(i));
                     }
                 }
-
-            }
+                else if(tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice == "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double checker = Double.parseDouble(maxPrice);
+                    if (price < checker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if (propertyType.equals("Any") && location.equals("Any") && minPrice != "No Min" && maxPrice.equals("No Max")) {
+                    double price = tableProperty.get(i).getPrice();
+                    double checker = Double.parseDouble(minPrice);
+                    if (price > checker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(propertyType.equals("Any") && location.equals("Any") && minPrice == "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double checker = Double.parseDouble(maxPrice);
+                    if (price < checker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(propertyType.equals("Any") && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice != "No Min" && maxPrice == "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double checker = Double.parseDouble(minPrice);
+                    if (price > checker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(propertyType.equals("Any") && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice == "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double checker = Double.parseDouble(maxPrice);
+                    if (price < checker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(propertyType.equals("Any") && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice != "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Minchecker = Double.parseDouble(minPrice);
+                    double Maxchecker = Double.parseDouble(maxPrice);
+                    if (price > Minchecker && price < Maxchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice != "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Minchecker = Double.parseDouble(minPrice);
+                    double Maxchecker = Double.parseDouble(maxPrice);
+                    if (price > Minchecker && price < Maxchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(propertyType.equals("Any") && location.equals("Any") && minPrice != "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Minchecker = Double.parseDouble(minPrice);
+                    double Maxchecker = Double.parseDouble(maxPrice);
+                    if (price > Minchecker && price < Maxchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(tableProperty.get(i).getCategory().equals(propertyType) && location.equals("Any") && minPrice != "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Minchecker = Double.parseDouble(minPrice);
+                    double Maxchecker = Double.parseDouble(maxPrice);
+                    if (price > Minchecker && price < Maxchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(tableProperty.get(i).getCategory().equals(propertyType) && location.equals("Any") && minPrice != "No Min" && maxPrice == "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Minchecker = Double.parseDouble(minPrice);
+                    if (price > Minchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(tableProperty.get(i).getCategory().equals(propertyType) && location.equals("Any") && minPrice == "No Min" && maxPrice != "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Maxchecker = Double.parseDouble(maxPrice);
+                    if (price < Maxchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                else if(tableProperty.get(i).getCategory().equals(propertyType) && tableProperty.get(i).getLocationGeneral().equals(location) && minPrice != "No Min" && maxPrice == "No Max") {
+                    double price = tableProperty.get(i).getPrice();
+                    double Minchecker = Double.parseDouble(minPrice);
+                    if (price > Minchecker) {
+                        searchResults.add(tableProperty.get(i));
+                    }
+                }
+                }
             return searchResults;
         }
     }
