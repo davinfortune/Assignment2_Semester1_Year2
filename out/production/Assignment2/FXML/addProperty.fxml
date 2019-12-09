@@ -40,7 +40,7 @@
                 <Label layoutX="347.0" layoutY="141.0" prefHeight="17.0" prefWidth="44.0" text="County" />
                 <Button layoutX="467.0" layoutY="291.0" mnemonicParsing="false" text="Return home" />
             <Button layoutX="402.0" layoutY="205.0" mnemonicParsing="false" onAction="#selectImageButtonPressed" text="Upload an Image" />
-            <TextField fx:id="imageSelectedLabel" layoutX="381.0" layoutY="235.0" />
+            <TextField fx:id="txtPath" layoutX="381.0" layoutY="235.0" />
             </children>
         </Pane>
     </children>

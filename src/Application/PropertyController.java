@@ -57,6 +57,8 @@ public class PropertyController implements Initializable {
     @FXML
     private TextArea txtFeedBack;
     @FXML
+    private TextField txtPath;
+    @FXML
     private TextArea txtlistAllProperties;
     @FXML
     private TextArea txtlistAllAgentDetails;
@@ -89,7 +91,9 @@ public class PropertyController implements Initializable {
     @FXML
     private TableColumn<Property, String> eircodeColumn;
 
-    String imageSelectedLabel;
+    private String imageSelectedLabel;
+    private String imageName;
+    private String imageSelected;
 
     public void handleReadBtn(ActionEvent e) {
 
@@ -301,12 +305,11 @@ public class PropertyController implements Initializable {
         window.show();
     }
 
-    public void selectImageButtonPressed(ActionEvent event) {
+    public void selectImageButtonPressed(ActionEvent event) throws Exception {
         final FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Upload Property Pictures");
 
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("All Images", "*.*"),
                 new FileChooser.ExtensionFilter("JPG", "*.jpg"),
                 new FileChooser.ExtensionFilter("PNG", "*.png")
         );
@@ -315,8 +318,8 @@ public class PropertyController implements Initializable {
 
         File source = fileChooser.showOpenDialog(stage);
 
-        File destination = new File(""+source.getName());
-        String imageSelectedLabel = source.getName();
+        File destination = new File("src/img/"+source.getName());
+        imageSelectedLabel = source.getName();
 
         if (source != null) {
             FileChannel sourceChannel = null;
@@ -325,33 +328,30 @@ public class PropertyController implements Initializable {
                 sourceChannel = new FileInputStream(source).getChannel();
                 destChannel = new FileOutputStream(destination).getChannel();
                 destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
-                String imageSelected = source.getName();
-                boolean imageIsSelected = true;
+                imageSelected = source.getName();
 
             }
             catch(IOException e){
-                System.out.println("IOException Image Selection");
+                txtFeedBack.setText("IOException Image Selection");
             }
             catch (Exception e){
-                System.out.println("Exception Image Selection");
+                txtFeedBack.setText("Exception Image Selection");
 
             }
             finally{
                 try {
                     sourceChannel.close();
                     destChannel.close();
-                    System.out.println("Channels closed");
+                    txtFeedBack.setText("Channels closed");
                 }
                 catch(IOException e){
-                    System.out.println("IOException Close Channel");
+                    txtFeedBack.setText("IOException Close Channel");
                 }
                 catch (Exception e){
-                    System.out.println("Exception Close Channel");
+                    txtFeedBack.setText("Exception Close Channel");
                 }
             }
-            String imageName = destination.getName();
-            System.out.println(destination.getAbsolutePath());
-            Image image = new Image(destination.getAbsolutePath());
+            txtPath.setText(source.getAbsolutePath());
         }
     }
 
@@ -361,9 +361,9 @@ public class PropertyController implements Initializable {
         fileChooser.setInitialDirectory(
                 new File(System.getProperty("user.home"))
         );
-        //new FileChooser.ExtensionFilter("All Images", "*.*"),
 
         fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("All Images", "*.*"),
                 new FileChooser.ExtensionFilter("JPG", "*.jpg"),
                 new FileChooser.ExtensionFilter("PNG", "*.png")
         );
