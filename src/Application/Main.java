@@ -32,6 +32,7 @@ public class  Main extends Application {
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/homeScreenAdmin.fxml"))); //index 5
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/loginAgent.fxml")));//index 6
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/homeScreenAgent.fxml")));//index 7
+        anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/viewAllProperty.fxml")));//index 8
 
         primaryStage.setTitle("Davt.ie");
         primaryStage.setScene(new Scene(root, 700, 550));

@@ -47,6 +47,8 @@ public class PropertyController implements Initializable {
     @FXML
     private TextField txtPrice;
     @FXML
+    private TextField txtCounty;
+    @FXML
     private TextField txtDeleteIndex;
     @FXML
     private TextArea txtFeedBack;
@@ -269,6 +271,11 @@ public class PropertyController implements Initializable {
     public void handleLogOutBtn(ActionEvent e) throws Exception{
         Main.set_pane(0);
     }
+
+    public void handleViewDetailProperty(ActionEvent e) throws Exception{
+        Main.set_pane(8);
+    }
+
 
     ObservableList<String> categories = FXCollections.observableArrayList("Any", "Apartment", "Semi-Detached House", "Industrial", "Attached House", "Detached House");
 

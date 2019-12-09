@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.showImageController">
+   <children>
+      <Label layoutX="272.0" layoutY="52.0" prefHeight="17.0" prefWidth="76.0" text="Property ID :" />
+      <ImageView fx:id="propertyImage" fitHeight="197.0" fitWidth="217.0" layoutX="41.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txtId" editable="false" layoutX="348.0" layoutY="48.0" />
+      <Label layoutX="272.0" layoutY="88.0" prefHeight="17.0" prefWidth="76.0" text="Description :" />
+      <TextField fx:id="txtDescription" editable="false" layoutX="348.0" layoutY="84.0" prefHeight="106.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="240.0" prefHeight="17.0" prefWidth="76.0" text="Address :" />
+      <TextField fx:id="txtAddress" editable="false" layoutX="109.0" layoutY="236.0" prefHeight="56.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="301.0" prefHeight="17.0" prefWidth="54.0" text="Town :" />
+      <TextField fx:id="txtlocationSpecific" editable="false" layoutX="109.0" layoutY="301.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="341.0" prefHeight="17.0" prefWidth="54.0" text="County :" />
+      <TextField fx:id="txtCounty" editable="false" layoutX="109.0" layoutY="337.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="300.0" layoutY="204.0" prefHeight="17.0" prefWidth="40.0" text="Price :" />
+      <TextField fx:id="txtPrice" editable="false" layoutX="348.0" layoutY="200.0" />
+   </children>
+</AnchorPane>
