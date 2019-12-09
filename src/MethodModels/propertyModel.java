@@ -18,11 +18,11 @@ public class propertyModel {
 
     private LinkListObjects property = new LinkListObjects();
 
-    public boolean addProperty(int propertyId, String description, String address, String propertyType, String locationGeneral, String locationSpecific, String BER, String Eircode, double price){
+    public boolean addProperty(int propertyId, String description, String address, String propertyType, String locationGeneral, String locationSpecific, String BER, String Eircode, double price,String image){
         if(property.isEmpty()) {
             try {
                 loadProperty();
-                Property propertyLocal = new Property(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price);
+                Property propertyLocal = new Property(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, image);
                 saveProperty(propertyLocal);
                 return true;
             } catch (Exception e) {
@@ -31,7 +31,7 @@ public class propertyModel {
         }
         else {
             try {
-                Property propertyLocal = new Property(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price);
+                Property propertyLocal = new Property(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, image);
                 saveProperty(propertyLocal);
                 return true;
             } catch (Exception t) {

@@ -34,11 +34,13 @@
                 <Label layoutX="38.0" layoutY="338.0" prefHeight="17.0" prefWidth="73.0" text="BER" />
                 <Label layoutX="38.0" layoutY="373.0" prefHeight="17.0" prefWidth="73.0" text="Eircode" />
                 <Label layoutX="38.0" layoutY="408.0" prefHeight="17.0" prefWidth="73.0" text="Price" />
-                <Button layoutX="367.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleAddPropertyBtn" text="Create" />
-                <TextArea fx:id="txtFeedBack" layoutX="346.0" layoutY="273.0" prefHeight="132.0" prefWidth="204.0" />
+                <Button layoutX="360.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleAddPropertyBtn" text="Create" />
+                <TextArea fx:id="txtFeedBack" layoutX="347.0" layoutY="338.0" prefHeight="132.0" prefWidth="204.0" />
                 <Label layoutX="310.0" layoutY="84.0" prefHeight="17.0" prefWidth="83.0" text="Property Type" />
                 <Label layoutX="347.0" layoutY="141.0" prefHeight="17.0" prefWidth="44.0" text="County" />
-                <Button layoutX="464.0" layoutY="205.0" mnemonicParsing="false" text="Return home" />
+                <Button layoutX="467.0" layoutY="291.0" mnemonicParsing="false" text="Return home" />
+            <Button layoutX="402.0" layoutY="205.0" mnemonicParsing="false" onAction="#selectImageButtonPressed" text="Upload an Image" />
+            <TextField fx:id="imageSelectedLabel" layoutX="381.0" layoutY="235.0" />
             </children>
         </Pane>
     </children>

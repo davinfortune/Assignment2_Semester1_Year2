@@ -5,26 +5,30 @@ import ApplicationModels.Property;
 import MethodModels.propertyModel;
 import ApplicationModels.LinkListObjects;
 
+
 import java.io.*;
 import java.net.URL;
-import java.rmi.server.ExportException;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.ResourceBundle;
-import java.util.function.DoubleBinaryOperator;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DocumentReader;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-import javax.swing.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 public class PropertyController implements Initializable {
     protected propertyModel property;
@@ -61,6 +65,8 @@ public class PropertyController implements Initializable {
     @FXML
     private TextArea txtAreaPropertyInfo;
     @FXML
+    private ImageView propertyImage;
+    @FXML
     private Button updateButton;
     @FXML
     private ComboBox<String> categorySelect = new ComboBox<>();
@@ -82,6 +88,8 @@ public class PropertyController implements Initializable {
     private TableColumn<Property, String> addressColumn;
     @FXML
     private TableColumn<Property, String> eircodeColumn;
+
+    String imageSelectedLabel;
 
     public void handleReadBtn(ActionEvent e) {
 
@@ -113,7 +121,7 @@ public class PropertyController implements Initializable {
 
             double price = Double.parseDouble(txtPrice.getText());
 
-            if(property.addProperty(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price)){
+            if(property.addProperty(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, imageSelectedLabel)){
                 txtId.setText("");
                 txtDescription.setText("");
                 txtAddress.setText("");
@@ -272,10 +280,94 @@ public class PropertyController implements Initializable {
         Main.set_pane(0);
     }
 
-    public void handleViewDetailProperty(ActionEvent e) throws Exception{
-        Main.set_pane(8);
+    public void changeSceneToDetailedViewBtn(ActionEvent e) throws IOException
+    {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/viewAllProperty.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        showImageController controller = loader.getController();
+        Property propertyToDisplay =(Property)tblView.getSelectionModel().getSelectedItem();
+        if(propertyToDisplay == null)
+            return;
+
+        controller.initData(propertyToDisplay);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
+    public void selectImageButtonPressed(ActionEvent event) {
+        final FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Upload Property Pictures");
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("All Images", "*.*"),
+                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+                new FileChooser.ExtensionFilter("PNG", "*.png")
+        );
+
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        File source = fileChooser.showOpenDialog(stage);
+
+        File destination = new File(""+source.getName());
+        String imageSelectedLabel = source.getName();
+
+        if (source != null) {
+            FileChannel sourceChannel = null;
+            FileChannel destChannel = null;
+            try {
+                sourceChannel = new FileInputStream(source).getChannel();
+                destChannel = new FileOutputStream(destination).getChannel();
+                destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+                String imageSelected = source.getName();
+                boolean imageIsSelected = true;
+
+            }
+            catch(IOException e){
+                System.out.println("IOException Image Selection");
+            }
+            catch (Exception e){
+                System.out.println("Exception Image Selection");
+
+            }
+            finally{
+                try {
+                    sourceChannel.close();
+                    destChannel.close();
+                    System.out.println("Channels closed");
+                }
+                catch(IOException e){
+                    System.out.println("IOException Close Channel");
+                }
+                catch (Exception e){
+                    System.out.println("Exception Close Channel");
+                }
+            }
+            String imageName = destination.getName();
+            System.out.println(destination.getAbsolutePath());
+            Image image = new Image(destination.getAbsolutePath());
+        }
+    }
+
+    private static void configureFileChooser(
+            final FileChooser fileChooser) {
+        fileChooser.setTitle("View Pictures");
+        fileChooser.setInitialDirectory(
+                new File(System.getProperty("user.home"))
+        );
+        //new FileChooser.ExtensionFilter("All Images", "*.*"),
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+                new FileChooser.ExtensionFilter("PNG", "*.png")
+        );
+    }
 
     ObservableList<String> categories = FXCollections.observableArrayList("Any", "Apartment", "Semi-Detached House", "Industrial", "Attached House", "Detached House");
 

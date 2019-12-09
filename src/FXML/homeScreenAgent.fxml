@@ -48,9 +48,9 @@
                                 </Menu>
                                 <Menu mnemonicParsing="false" text="Edit">
                                     <items>
-                                        <MenuItem mnemonicParsing="false"  text="Create Property" />
-                                        <MenuItem mnemonicParsing="false"  text="Update Property" />
-                                        <MenuItem mnemonicParsing="false"  text="Delete Property" />
+                                        <MenuItem mnemonicParsing="false" onAction="#handleAddPropertyButton" text="Create Property" />
+                                        <MenuItem mnemonicParsing="false" text="Update Property" />
+                                        <MenuItem mnemonicParsing="false" text="Delete Property" />
                                     </items>
                                 </Menu>
                                 <Menu mnemonicParsing="false" text="Account">

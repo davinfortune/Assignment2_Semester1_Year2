@@ -81,7 +81,7 @@
                   <Pane prefHeight="388.0" prefWidth="613.0">
                      <children>
                         <HBox prefHeight="391.0" prefWidth="199.0" />
-                        <TableView fx:id="tblView" layoutX="50.0" layoutY="9.0" onMouseClicked="#handleViewDetailProperty" prefHeight="371.0" prefWidth="607.0" style="-fx-background-color: #FFFFFF;">
+                        <TableView fx:id="tblView" layoutX="50.0" layoutY="9.0" prefHeight="327.0" prefWidth="609.0" style="-fx-background-color: #FFFFFF;">
                           <columns>
                             <TableColumn fx:id="idColumn" prefWidth="94.0" text="ID" />
                             <TableColumn fx:id="priceColumn" minWidth="7.0" prefWidth="127.0" text="Price" />
@@ -90,6 +90,7 @@
                               <TableColumn fx:id="eircodeColumn" prefWidth="81.0" text="Eircode" />
                           </columns>
                         </TableView>
+                        <Button layoutX="523.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeSceneToDetailedViewBtn" text="View Detail" />
                      </children>
                   </Pane>
                </children></HBox>

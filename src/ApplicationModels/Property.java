@@ -10,6 +10,20 @@ public class Property {
     private String BER;
     private String eircode;
     private double price;
+    private String imagePath;
+
+    public Property(int propertyId, String description, String address, String category, String locationGeneral, String locationSpecific, String BER, String eircode, double price, String imagePath) {
+        this.propertyId = propertyId;
+        this.description = description;
+        this.address = address;
+        this.category = category;
+        this.locationGeneral = locationGeneral;
+        this.locationSpecific = locationSpecific;
+        this.BER = BER;
+        this.eircode = eircode;
+        this.price = price;
+        this.imagePath = imagePath;
+    }
 
     public Property(int propertyId, String description, String address, String category, String locationGeneral, String locationSpecific, String BER, String eircode, double price) {
         this.propertyId = propertyId;
@@ -21,6 +35,15 @@ public class Property {
         this.BER = BER;
         this.eircode = eircode;
         this.price = price;
+        imagePath = null;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public int getPropertyId() {
