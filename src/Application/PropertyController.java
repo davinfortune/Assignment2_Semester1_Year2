@@ -92,8 +92,7 @@ public class PropertyController implements Initializable {
     private TableColumn<Property, String> eircodeColumn;
 
     private String imageSelectedLabel;
-    private String imageName;
-    private String imageSelected;
+    private String noImage = "No Image";
 
     public void handleReadBtn(ActionEvent e) {
 
@@ -124,24 +123,40 @@ public class PropertyController implements Initializable {
             String Eircode = txtEircode.getText();
 
             double price = Double.parseDouble(txtPrice.getText());
-
-            if(property.addProperty(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, imageSelectedLabel)){
-                txtId.setText("");
-                txtDescription.setText("");
-                txtAddress.setText("");
-                categorySelect.setValue("Any");
-                locationGeneralSelect.setValue("Any");
-                txtlocationSpecific.setText("");
-                txtBER.setText("");
-                txtEircode.setText("");
-                txtPrice.setText("");
-                txtFeedBack.setText("Property Added");
-                Main.set_pane(0);
+            if(txtPath.getText().trim().equals("")) {
+                if (property.addProperty(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, noImage)) {
+                    txtId.setText("");
+                    txtDescription.setText("");
+                    txtAddress.setText("");
+                    categorySelect.setValue("Any");
+                    locationGeneralSelect.setValue("Any");
+                    txtlocationSpecific.setText("");
+                    txtBER.setText("");
+                    txtEircode.setText("");
+                    txtPrice.setText("");
+                    txtFeedBack.setText("Property Added");
+                    Main.set_pane(0);
+                } else {
+                    txtFeedBack.setText("Property Not Added");
+                }
             }
             else {
-                txtFeedBack.setText("Property Not Added");
+                if (property.addProperty(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, imageSelectedLabel)) {
+                    txtId.setText("");
+                    txtDescription.setText("");
+                    txtAddress.setText("");
+                    categorySelect.setValue("Any");
+                    locationGeneralSelect.setValue("Any");
+                    txtlocationSpecific.setText("");
+                    txtBER.setText("");
+                    txtEircode.setText("");
+                    txtPrice.setText("");
+                    txtFeedBack.setText("Property Added");
+                    Main.set_pane(0);
+                } else {
+                    txtFeedBack.setText("Property Not Added");
+                }
             }
-
         }
         catch(Exception d){
             txtFeedBack.setText("Please Make sure you\nentered Everything correctly\n" + d);
@@ -319,7 +334,7 @@ public class PropertyController implements Initializable {
         File source = fileChooser.showOpenDialog(stage);
 
         File destination = new File("src/img/"+source.getName());
-        imageSelectedLabel = source.getName();
+        imageSelectedLabel = "/img/" + source.getName();
 
         if (source != null) {
             FileChannel sourceChannel = null;
@@ -328,7 +343,6 @@ public class PropertyController implements Initializable {
                 sourceChannel = new FileInputStream(source).getChannel();
                 destChannel = new FileOutputStream(destination).getChannel();
                 destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
-                imageSelected = source.getName();
 
             }
             catch(IOException e){

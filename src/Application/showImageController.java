@@ -43,7 +43,12 @@ public class showImageController {
     public void initData(Property property)
     {
         Image img;
-        img = new Image("/img/default.png");
+        if(property.getImagePath().equals("No Image")) {
+            img = new Image("/img/default.png");
+        }
+        else{
+            img = new Image(property.getImagePath());
+        }
         propertyImage.setImage(img);
 
         txtId.setText(""+property.getPropertyId()); //int to String

@@ -25,19 +25,6 @@ public class Property {
         this.imagePath = imagePath;
     }
 
-    public Property(int propertyId, String description, String address, String category, String locationGeneral, String locationSpecific, String BER, String eircode, double price) {
-        this.propertyId = propertyId;
-        this.description = description;
-        this.address = address;
-        this.category = category;
-        this.locationGeneral = locationGeneral;
-        this.locationSpecific = locationSpecific;
-        this.BER = BER;
-        this.eircode = eircode;
-        this.price = price;
-        imagePath = null;
-    }
-
     public String getImagePath() {
         return imagePath;
     }
