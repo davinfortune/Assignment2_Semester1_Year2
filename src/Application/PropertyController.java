@@ -30,6 +30,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 public class PropertyController implements Initializable {
     protected propertyModel property;
 
@@ -51,6 +53,8 @@ public class PropertyController implements Initializable {
     @FXML
     private TextField txtPrice;
     @FXML
+    private TextField txtCategory;
+    @FXML
     private TextField txtCounty;
     @FXML
     private TextField txtDeleteIndex;
@@ -58,6 +62,7 @@ public class PropertyController implements Initializable {
     private TextArea txtFeedBack;
     @FXML
     private TextField txtPath;
+
     @FXML
     private TextArea txtlistAllProperties;
     @FXML
@@ -165,6 +170,7 @@ public class PropertyController implements Initializable {
 
 
 /*
+
     public void handleReadPropertyBtn(ActionEvent e) throws Exception{
         int index = Integer.parseInt(txtDeleteIndex.getText());
         if(property. == 0){
@@ -204,15 +210,17 @@ public class PropertyController implements Initializable {
         }
         updateButton.setDisable(false);
     }
+*/
+
+
 
 
     public void handleUpdatePropertyBtn(ActionEvent e) throws Exception{
-        property.updateProperty(Integer.parseInt(txtDeleteIndex.getText()),Integer.parseInt(txtId.getText()), txtDescription.getText(), txtAddress.getText(), categorySelect.getValue(), locationGeneralSelect.getValue(),
-                txtlocationSpecific.getText(), txtBER.getText(), txtEircode.getText(), Double.parseDouble(txtPrice.getText()));
+
         XStream xstream = new XStream(new DomDriver());
         try {
             ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("property.xml"));
-            out.writeObject(property.propertys);
+            out.writeObject("TBD");
             out.close();
         } catch (Exception t) {
             txtFeedBack.setText("Error Updating Property");
@@ -221,9 +229,13 @@ public class PropertyController implements Initializable {
         Main.set_pane(2);
     }
 
-    public void handleDeleteButton(ActionEvent e) throws Exception{
+
+
+
+
+/*    public void handleDeleteButton(ActionEvent e) throws Exception {
         int index = Integer.parseInt(txtDeleteIndex.getText());
-        if(index <= property.propertys.size() && index >= 0) {
+        if (index <= property.propertys.size() && index >= 0) {
             property.deleteProperty(index);
             XStream xstream = new XStream(new DomDriver());
             try {
@@ -233,14 +245,12 @@ public class PropertyController implements Initializable {
             } catch (Exception t) {
                 txtFeedBack.setText("Error Deleting the Property");
             }
-        }
-        else {
+        } else {
             txtFeedBack.setText("Please Enter a Valid \nProperty Number to Delete");
         }
         Main.set_pane(2);
         txtAreaPropertyInfo.setText(property.listAllLowDetailProperties());
     }*/
-
 
     public void handleSearchButton(ActionEvent e) throws Exception {
         String category = categorySelect.getValue();
@@ -298,6 +308,8 @@ public class PropertyController implements Initializable {
     public void handleLogOutBtn(ActionEvent e) throws Exception{
         Main.set_pane(0);
     }
+
+
 
     public void changeSceneToDetailedViewBtn(ActionEvent e) throws IOException
     {
