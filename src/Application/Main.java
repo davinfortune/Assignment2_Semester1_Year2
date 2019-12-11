@@ -38,7 +38,7 @@ public class  Main extends Application {
         primaryStage.setTitle("Davt.ie");
         primaryStage.setScene(new Scene(root, 1000, 550));
         primaryStage.show();
-        Main.set_pane(0);
+        Main.set_pane(7);
     }
 
     public static propertyAdmin getAdmin() { return admin; }

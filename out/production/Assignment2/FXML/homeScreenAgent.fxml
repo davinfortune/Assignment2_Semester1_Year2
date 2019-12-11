@@ -3,9 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -37,22 +34,6 @@
                                 </LinearGradient>
                             </textFill>
                         </Label>
-                        <MenuBar layoutY="-3.0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
-                            <menus>
-                                <Menu mnemonicParsing="false" text="File">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Load Properties" />
-                                        <MenuItem mnemonicParsing="false" text="Display all Properties" />
-                                        <MenuItem mnemonicParsing="false" text="Exit System" />
-                                    </items>
-                                </Menu>
-                                <Menu mnemonicParsing="false" text="Edit">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Create Property" />
-                                    </items>
-                                </Menu>
-                            </menus>
-                        </MenuBar>
                         <Label layoutX="896.0" layoutY="10.0" prefHeight="40.0" prefWidth="79.0" text="Agent">
                             <font>
                                 <Font size="28.0" />
@@ -60,6 +41,7 @@
                         </Label>
                         <TextArea fx:id="txtFeedBack" editable="false" layoutX="780.0" layoutY="50.0" prefHeight="43.0" prefWidth="206.0" />
                   <Button layoutX="780.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogOutBtn" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #F90000;" text="Log Out" textFill="WHITE" />
+                  <Button layoutY="-3.0" mnemonicParsing="false" onAction="#handleAddAgentBtn" style="-fx-background-color: #FFFFFF;" text="Create " />
                     </children>
                 </AnchorPane>
             </top>
@@ -81,7 +63,7 @@
                                 </columns>
                             </TableView>
                         <Button layoutX="460.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleUpdatePropertyBtn" text="Update" />
-                        <Button layoutX="548.0" layoutY="341.0" mnemonicParsing="false" text="Delete" />
+                        <Button layoutX="548.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleDeleteBtn" text="Delete" />
                             </children>
                         </Pane>
                     </children></HBox>

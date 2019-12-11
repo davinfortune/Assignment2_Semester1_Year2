@@ -47,7 +47,16 @@ public class AgentController {
         else if(login(txtUsername.getText(),txtPassword.getText())){
             txtUsername.setText("");
             txtPassword.setText("");
-            Main.set_pane(7);
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/FXML/homeScreenAgent.fxml"));
+            Parent tableViewParent = loader.load();
+
+            Scene tableViewScene = new Scene(tableViewParent);
+
+            Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+            window.setScene(tableViewScene);
+            window.show();
         }
         else {
             txtPassword.clear();

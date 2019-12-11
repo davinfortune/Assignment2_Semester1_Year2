@@ -93,144 +93,43 @@
                   </data>
                   <next>
                     <data class="ApplicationModels.Property">
-                      <propertyId>75826</propertyId>
-                      <description>1 Bedroom 1 Bathroom</description>
-                      <address>784 Rockmount</address>
-                      <category>Semi-Detached House</category>
-                      <locationGeneral>Co.Cork</locationGeneral>
-                      <locationSpecific>Garrys Town</locationSpecific>
-                      <BER>1235CC</BER>
-                      <eircode>X95X823</eircode>
-                      <price>245000.0</price>
+                      <propertyId>123512</propertyId>
+                      <description>4 Bedroom 2 Bathroom</description>
+                      <address>84 The Heights</address>
+                      <category>Detached House</category>
+                      <locationGeneral>Co.Limerick</locationGeneral>
+                      <locationSpecific>KillsTown</locationSpecific>
+                      <BER>123DD</BER>
+                      <eircode>X73D123</eircode>
+                      <price>475000.0</price>
                       <imagePath>No Image</imagePath>
                     </data>
                     <next>
                       <data class="ApplicationModels.Property">
-                        <propertyId>123512</propertyId>
-                        <description>4 Bedroom 2 Bathroom</description>
-                        <address>84 The Heights</address>
-                        <category>Detached House</category>
-                        <locationGeneral>Co.Limerick</locationGeneral>
-                        <locationSpecific>KillsTown</locationSpecific>
-                        <BER>123DD</BER>
-                        <eircode>X73D123</eircode>
-                        <price>475000.0</price>
-                        <imagePath>No Image</imagePath>
+                        <propertyId>5136342</propertyId>
+                        <description>2 Bedroom 1 Bathroom</description>
+                        <address>123 MajorVille</address>
+                        <category>Semi-Detached House</category>
+                        <locationGeneral>Co.Kilkenny</locationGeneral>
+                        <locationSpecific>Killmac</locationSpecific>
+                        <BER>WE2123</BER>
+                        <eircode>KK912KK123</eircode>
+                        <price>225000.0</price>
+                        <imagePath>/img/377-19927508010001.jpg</imagePath>
                       </data>
                       <next>
                         <data class="ApplicationModels.Property">
-                          <propertyId>123542</propertyId>
-                          <description>3 Bedroom 2 Bathroom</description>
-                          <address>123 Newbridge</address>
-                          <category>Apartment</category>
-                          <locationGeneral>Co.Waterford</locationGeneral>
-                          <locationSpecific>Newtown</locationSpecific>
-                          <BER>123WX</BER>
-                          <eircode>X91X6F3</eircode>
-                          <price>167000.0</price>
+                          <propertyId>12342242</propertyId>
+                          <description>5 Bedroom 2 Bathroom</description>
+                          <address>9 Ard na Groi</address>
+                          <category>Detached House</category>
+                          <locationGeneral>Co.Cork</locationGeneral>
+                          <locationSpecific>Kilmaugh</locationSpecific>
+                          <BER>XS1234</BER>
+                          <eircode>CK1234</eircode>
+                          <price>450000.0</price>
                           <imagePath>No Image</imagePath>
                         </data>
-                        <next>
-                          <data class="ApplicationModels.Property">
-                            <propertyId>5136342</propertyId>
-                            <description>2 Bedroom 1 Bathroom</description>
-                            <address>123 MajorVille</address>
-                            <category>Semi-Detached House</category>
-                            <locationGeneral>Co.Kilkenny</locationGeneral>
-                            <locationSpecific>Killmac</locationSpecific>
-                            <BER>WE2123</BER>
-                            <eircode>KK912KK123</eircode>
-                            <price>225000.0</price>
-                            <imagePath>/img/377-19927508010001.jpg</imagePath>
-                          </data>
-                          <next>
-                            <data class="ApplicationModels.Property">
-                              <propertyId>12342242</propertyId>
-                              <description>5 Bedroom 2 Bathroom</description>
-                              <address>9 Ard na Groi</address>
-                              <category>Detached House</category>
-                              <locationGeneral>Co.Cork</locationGeneral>
-                              <locationSpecific>Kilmaugh</locationSpecific>
-                              <BER>XS1234</BER>
-                              <eircode>CK1234</eircode>
-                              <price>450000.0</price>
-                              <imagePath>No Image</imagePath>
-                            </data>
-                            <next>
-                              <data class="ApplicationModels.Property">
-                                <propertyId>1234</propertyId>
-                                <description>DDD</description>
-                                <address>DDD</address>
-                                <category>Apartment</category>
-                                <locationGeneral>Co.Waterford</locationGeneral>
-                                <locationSpecific>DDD</locationSpecific>
-                                <BER>DDD</BER>
-                                <eircode>DDD</eircode>
-                                <price>1234.0</price>
-                              </data>
-                              <next>
-                                <data class="ApplicationModels.Property">
-                                  <propertyId>12344</propertyId>
-                                  <description>12234</description>
-                                  <address>213451252345</address>
-                                  <category>Apartment</category>
-                                  <locationGeneral>Co.Cork</locationGeneral>
-                                  <locationSpecific>32453245</locationSpecific>
-                                  <BER>23453452</BER>
-                                  <eircode>34523453421</eircode>
-                                  <price>2223.0</price>
-                                </data>
-                                <next>
-                                  <data class="ApplicationModels.Property">
-                                    <propertyId>12354</propertyId>
-                                    <description>13245</description>
-                                    <address>12345</address>
-                                    <category>Apartment</category>
-                                    <locationGeneral>Co.Waterford</locationGeneral>
-                                    <locationSpecific>12345</locationSpecific>
-                                    <BER>12345</BER>
-                                    <eircode>12345</eircode>
-                                    <price>123432.0</price>
-                                  </data>
-                                  <next>
-                                    <data class="ApplicationModels.Property">
-                                      <propertyId>123554</propertyId>
-                                      <description>SSSS</description>
-                                      <address>SSSS</address>
-                                      <category>Apartment</category>
-                                      <locationGeneral>Co.Waterford</locationGeneral>
-                                      <locationSpecific>SSS</locationSpecific>
-                                      <BER>SSSS</BER>
-                                      <eircode>SSSS</eircode>
-                                      <price>1342.0</price>
-                                    </data>
-                                    <next>
-                                      <data class="ApplicationModels.Property">
-                                        <propertyId>123512</propertyId>
-                                        <description>4 Bedroom 2 Bathroom</description>
-                                        <address>8 Try Fallows</address>
-                                        <category>Detached House</category>
-                                        <locationGeneral>Co.Limerick</locationGeneral>
-                                        <locationSpecific>KillsTown</locationSpecific>
-                                        <BER>123DD</BER>
-                                        <eircode>X73D123</eircode>
-                                        <price>475000.0</price>
-                                        <imagePath>/img/5045d31d4bcce03d9de4f05976219417_XL.jpg</imagePath>
-                                      </data>
-                                      <outer-class reference="../../../../../../../../../../../../../../../../../.."/>
-                                    </next>
-                                    <outer-class reference="../../../../../../../../../../../../../../../../.."/>
-                                  </next>
-                                  <outer-class reference="../../../../../../../../../../../../../../../.."/>
-                                </next>
-                                <outer-class reference="../../../../../../../../../../../../../../.."/>
-                              </next>
-                              <outer-class reference="../../../../../../../../../../../../../.."/>
-                            </next>
-                            <outer-class reference="../../../../../../../../../../../../.."/>
-                          </next>
-                          <outer-class reference="../../../../../../../../../../../.."/>
-                        </next>
                         <outer-class reference="../../../../../../../../../../.."/>
                       </next>
                       <outer-class reference="../../../../../../../../../.."/>
@@ -251,6 +150,6 @@
       </next>
       <outer-class reference="../.."/>
     </first>
-    <length>17</length>
+    <length>10</length>
   </ApplicationModels.LinkListObjects>
 </object-stream>

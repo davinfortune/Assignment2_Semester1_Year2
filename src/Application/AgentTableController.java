@@ -114,7 +114,6 @@ public class AgentTableController implements Initializable {
             tempArray.add(forProperty);
             if(((Property) temp.get(i)).getPropertyId() == propertyToDisplay.getPropertyId()){
                 index = i;
-                System.out.print(index);
             }
         }
         if(propertyToDisplay == null)
@@ -183,7 +182,16 @@ public class AgentTableController implements Initializable {
     }
 
     public void handleAddAgentBtn(ActionEvent e) throws Exception{
-        Main.set_pane(2);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/addProperty.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void handleReturnHomeBtn(ActionEvent e) throws Exception{
@@ -268,6 +276,59 @@ public class AgentTableController implements Initializable {
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("category"));
 
         tableViewAgent.setItems(Newdata);
+    }
+    public void handleDeleteBtn(ActionEvent e) throws Exception {
+        int d = -1;
+        Property propertyToDisplay = (Property) tableViewAgent.getSelectionModel().getSelectedItem();
+        LinkListObjects temp = new LinkListObjects();
+        XStream xstream = new XStream(new DomDriver());
+        ObjectInputStream is = xstream.createObjectInputStream
+                (new FileReader("saveFiles/property.xml"));
+        temp = (LinkListObjects) is.readObject();
+        is.close();
+        for (int i = 0; i < temp.size(); i++) {
+            if (((Property) temp.get(i)).getPropertyId() == propertyToDisplay.getPropertyId()) {
+                d = i;
+            }
+        }
+        try {
+            temp.remove(d);
+            XStream save = new XStream(new DomDriver());
+            ObjectOutputStream out = save.createObjectOutputStream(new FileWriter("saveFiles/property.xml"));
+            out.writeObject(temp);
+            out.close();
+        }
+        catch (Exception z){
+            txtFeedBack.setText("Can not remove Property\n" + e);
+        }
+
+        try {
+            LinkListObjects tempPropertys;
+            ArrayList<Property> tableProperty = new ArrayList<>();
+            XStream reset = new XStream(new DomDriver());
+            ObjectInputStream set = reset.createObjectInputStream
+                    (new FileReader("saveFiles/property.xml"));
+            tempPropertys = (LinkListObjects) set.readObject();
+            set.close();
+            for (int i = 0; i < tempPropertys.size(); i++) {
+                Property forProperty = (Property) tempPropertys.get(i);
+                tableProperty.add(forProperty);
+            }
+
+            ObservableList<Property> data = FXCollections.observableArrayList(tableProperty);
+
+            idColumn.setCellValueFactory(new PropertyValueFactory<Property, Integer>("propertyId"));
+            countyColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("locationGeneral"));
+            addressColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("address"));
+            priceColumn.setCellValueFactory(new PropertyValueFactory<Property, Double>("price"));
+            descriptionColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("description"));
+            townColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("locationSpecific"));
+            categoryColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("category"));
+
+            tableViewAgent.setItems(data);
+        } catch (Exception f) {
+            txtFeedBack.setText("Could Not Load Propertys");
+        }
     }
 
     public void initData(Property property)

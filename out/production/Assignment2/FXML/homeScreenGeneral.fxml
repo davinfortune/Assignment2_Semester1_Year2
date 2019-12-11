@@ -43,21 +43,9 @@
                         <Font size="10.0" />
                      </font>
                   </TextArea>
-                  <Button layoutX="114.0" mnemonicParsing="false" onAction="#handleLoginAgentBtn" style="-fx-background-color: #FFFFFF;" text="Agent Login">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#handleLoginAdminButton" prefHeight="17.0" prefWidth="56.0" style="-fx-background-color: #FFFFFF;" text="Admin Login">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="56.0" mnemonicParsing="false" onAction="#handleRegisterAdminButton" style="-fx-background-color: #FFFFFF;" text="Admin Register">
-                     <font>
-                        <Font size="7.0" />
-                     </font>
-                  </Button>
+                  <Button layoutX="91.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleLoginAgentBtn" prefHeight="21.0" prefWidth="87.0" style="-fx-background-color: #FFFFFF;" text="Agent Login" />
+                  <Button mnemonicParsing="false" onAction="#handleLoginAdminButton" prefHeight="28.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF;" text="Admin Login" />
+                  <Button layoutX="183.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleRegisterAdminButton" prefHeight="20.0" prefWidth="104.0" style="-fx-background-color: #FFFFFF;" text="Admin Register" />
                   <Button layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSystemExitBtn" style="-fx-background-color: #F90000;" text="Exit System" textFill="WHITE" />
                </children>
             </AnchorPane>

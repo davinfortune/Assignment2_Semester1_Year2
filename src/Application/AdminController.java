@@ -8,10 +8,15 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import java.io.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
+import javafx.stage.Stage;
 
 public class AdminController {
     @FXML
@@ -52,8 +57,18 @@ public class AdminController {
             txtAreaFeedback.setText("Username and Password need \nto be 4 characters or more");
         }
         else if(login(txtUsername.getText(),txtPassword.getText())){
-            txtAreaFeedback.setText("Successful Login");
-            Main.set_pane(5);
+            txtUsername.setText("");
+            txtPassword.setText("");
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/FXML/homeScreenAgent.fxml"));
+            Parent tableViewParent = loader.load();
+
+            Scene tableViewScene = new Scene(tableViewParent);
+
+            Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+            window.setScene(tableViewScene);
+            window.show();
         }
         else {
 
@@ -101,6 +116,15 @@ public class AdminController {
 
     public void handleReturnHomeBtn(ActionEvent e) throws Exception
     {
-        Main.set_pane(0);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/homeScreenGeneral.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 }

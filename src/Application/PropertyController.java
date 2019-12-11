@@ -105,20 +105,17 @@ public class PropertyController implements Initializable {
     private String imageSelectedLabel;
     private String noImage = "No Image";
 
-    public void handleReadBtn(ActionEvent e) {
-
-    }
-
 
     public void handleAddPropertyBtn(ActionEvent e) throws Exception {
+        int propertyId;
         try {
-            int propertyId;
-            try {
-                propertyId = Integer.parseInt(txtId.getText());
-            } catch (Exception t) {
+            propertyId = Integer.parseInt(txtId.getText());
+            }
+            catch (Exception t) {
                 txtFeedBack.setText("Please enter an Integer");
                 propertyId = Integer.parseInt(null);
             }
+
             String description = txtDescription.getText();
 
             String address = txtAddress.getText();
@@ -134,6 +131,7 @@ public class PropertyController implements Initializable {
             String Eircode = txtEircode.getText();
 
             double price = Double.parseDouble(txtPrice.getText());
+
             if(txtPath.getText().trim().equals("")) {
                 if (property.addProperty(propertyId, description, address, propertyType, locationGeneral, locationSpecific, BER, Eircode, price, noImage)) {
                     txtId.setText("");
@@ -146,7 +144,16 @@ public class PropertyController implements Initializable {
                     txtEircode.setText("");
                     txtPrice.setText("");
                     txtFeedBack.setText("Property Added");
-                    Main.set_pane(0);
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/FXML/homeScreenAgent.fxml"));
+                    Parent tableViewParent = loader.load();
+
+                    Scene tableViewScene = new Scene(tableViewParent);
+
+                    Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+                    window.setScene(tableViewScene);
+                    window.show();
                 } else {
                     txtFeedBack.setText("Property Not Added");
                 }
@@ -163,33 +170,22 @@ public class PropertyController implements Initializable {
                     txtEircode.setText("");
                     txtPrice.setText("");
                     txtFeedBack.setText("Property Added");
-                    Main.set_pane(0);
+                    FXMLLoader loader = new FXMLLoader();
+                    loader.setLocation(getClass().getResource("/FXML/homeScreenAgent.fxml"));
+                    Parent tableViewParent = loader.load();
+
+                    Scene tableViewScene = new Scene(tableViewParent);
+
+                    Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+                    window.setScene(tableViewScene);
+                    window.show();
                 } else {
                     txtFeedBack.setText("Property Not Added");
                 }
             }
         }
-        catch(Exception d){
-            txtFeedBack.setText("Please Make sure you\nentered Everything correctly\n" + d);
-        }
-    }
 
-
-
-
-    public void handleUpdatePropertyBtn(ActionEvent e) throws Exception{
-
-        XStream xstream = new XStream(new DomDriver());
-        try {
-            ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("property.xml"));
-            out.writeObject("TBD");
-            out.close();
-        } catch (Exception t) {
-            txtFeedBack.setText("Error Updating Property");
-
-        }
-        Main.set_pane(2);
-    }
 
 
     public void handleSearchButton(ActionEvent e) throws Exception {
@@ -210,23 +206,6 @@ public class PropertyController implements Initializable {
         eircodeColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("eircode"));
 
         tblView.setItems(Newdata);
-    }
-
-    public void handleLoadPropertyBtn(ActionEvent e) throws Exception {
-     try{
-         property.loadProperty();
-     }
-     catch (Exception s){
-         txtFeedBack.setText("Cannot Load Propertys");
-     }
-    }
-
-    public void handleAddPropertyButton(ActionEvent e) throws Exception{
-        Main.set_pane(1);
-    }
-
-    public void handleRegisterAgentButton(ActionEvent e) throws Exception{
-        Main.set_pane(2);
     }
 
     public void handleRegisterAdminButton(ActionEvent e) throws Exception{
@@ -272,9 +251,6 @@ public class PropertyController implements Initializable {
         window.show();
     }
 
-    public void handleLogOutBtn(ActionEvent e) throws Exception{
-        Main.set_pane(0);
-    }
 
     public void handleReturnHomeBtn(ActionEvent e) throws Exception{
         FXMLLoader loader = new FXMLLoader();
