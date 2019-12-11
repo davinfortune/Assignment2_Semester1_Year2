@@ -11,10 +11,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -80,7 +85,16 @@ public class AgentController {
     }
 
  public void handleReturnHomeBtn(ActionEvent e) throws Exception{
-        Main.set_pane(0);
+     FXMLLoader loader = new FXMLLoader();
+     loader.setLocation(getClass().getResource("/FXML/homeScreenGeneral.fxml"));
+     Parent tableViewParent = loader.load();
+
+     Scene tableViewScene = new Scene(tableViewParent);
+
+     Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+     window.setScene(tableViewScene);
+     window.show();
     }
 
 }

@@ -230,11 +230,29 @@ public class PropertyController implements Initializable {
     }
 
     public void handleRegisterAdminButton(ActionEvent e) throws Exception{
-        Main.set_pane(3);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/registerAdmin.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void handleLoginAdminButton(ActionEvent e) throws Exception{
-        Main.set_pane(4);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/loginAdmin.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void handleSystemExitBtn(ActionEvent e) throws Exception{
@@ -242,11 +260,33 @@ public class PropertyController implements Initializable {
     }
 
     public void handleLoginAgentBtn(ActionEvent e) throws Exception{
-        Main.set_pane(6);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/loginAgent.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void handleLogOutBtn(ActionEvent e) throws Exception{
         Main.set_pane(0);
+    }
+
+    public void handleReturnHomeBtn(ActionEvent e) throws Exception{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/homeScreenGeneral.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void changeSceneToDetailedViewBtn(ActionEvent e) throws IOException

@@ -4,9 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
@@ -38,32 +35,6 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <MenuBar layoutY="-3.0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
-                     <menus>
-                        <Menu mnemonicParsing="false" text="File">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Load Properties" />
-                              <MenuItem mnemonicParsing="false" text="Display Properties" />
-                              <MenuItem mnemonicParsing="false" onAction="#handleSystemExitBtn" text="Exit System" />
-                           </items>
-                        </Menu>
-                        <Menu mnemonicParsing="false" text="Account">
-                           <items>
-                              <Menu mnemonicParsing="false" text="Admin">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" onAction="#handleLoginAdminButton" text="Login" />
-                                    <MenuItem mnemonicParsing="false" onAction="#handleRegisterAdminButton" text="Register" />
-                                 </items>
-                              </Menu>
-                              <Menu mnemonicParsing="false" text="Agent">
-                                 <items>
-                                    <MenuItem mnemonicParsing="false" onAction="#handleLoginAgentBtn" text="Login" />
-                                 </items>
-                              </Menu>
-                           </items>
-                        </Menu>
-                     </menus>
-                  </MenuBar>
                   <TextArea fx:id="txtFeedBack" accessibleRole="TEXT" editable="false" layoutX="825.0" layoutY="20.0" prefHeight="56.0" prefWidth="155.0">
                      <cursor>
                         <Cursor fx:constant="DISAPPEAR" />
@@ -72,6 +43,22 @@
                         <Font size="10.0" />
                      </font>
                   </TextArea>
+                  <Button layoutX="114.0" mnemonicParsing="false" onAction="#handleLoginAgentBtn" style="-fx-background-color: #FFFFFF;" text="Agent Login">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleLoginAdminButton" prefHeight="17.0" prefWidth="56.0" style="-fx-background-color: #FFFFFF;" text="Admin Login">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="56.0" mnemonicParsing="false" onAction="#handleRegisterAdminButton" style="-fx-background-color: #FFFFFF;" text="Admin Register">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSystemExitBtn" style="-fx-background-color: #F90000;" text="Exit System" textFill="WHITE" />
                </children>
             </AnchorPane>
          </top>
