@@ -2,21 +2,30 @@ package Application;
 
 
 import ApplicationModels.LinkListObjects;
+import ApplicationModels.Property;
 import ApplicationModels.propertyAgent;
+import MethodModels.propertyModel;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.ObjectInputStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class AgentController {
+    protected propertyModel property;
+
     LinkListObjects agents = new LinkListObjects();
 
     @FXML
@@ -24,14 +33,13 @@ public class AgentController {
     @FXML
     private PasswordField txtPassword;
     @FXML
-    private TextArea txtAreaFeedback;
-    
+    private TextArea txtFeedBack;
+
     public void handleLoginBtn(ActionEvent e) throws Exception {
         if(txtUsername.getText().length()<4 || txtPassword.getText().length()<4 ){
-            txtAreaFeedback.setText("Username and Password need \nto be 4 characters or more");
+            txtFeedBack.setText("Username and Password need \nto be 4 characters or more");
         }
         else if(login(txtUsername.getText(),txtPassword.getText())){
-            txtAreaFeedback.setText("Successful Login");
             Main.set_pane(7);
         }
         else {
@@ -48,12 +56,12 @@ public class AgentController {
         }
         catch(FileNotFoundException e) {
             agents =  new LinkListObjects();
-            txtAreaFeedback.setText("Password File not located\n" + e);
+            txtFeedBack.setText("Password File not located\n" + e);
             return false;
 
         }
         catch (Exception e) {
-            txtAreaFeedback.setText("Error accessing Password File\n" + e);
+            txtFeedBack.setText("Error accessing Password File\n" + e);
             return false;
         }
 
@@ -65,11 +73,12 @@ public class AgentController {
         return false;
     }
 
- public void handleAddAgentBtn(ActionEvent e) throws Exception{
-     Main.set_pane(2);
- }
+    public void handleAddAgentBtn(ActionEvent e) throws Exception{
+        Main.set_pane(2);
+    }
 
  public void handleReturnHomeBtn(ActionEvent e) throws Exception{
         Main.set_pane(0);
     }
+
 }

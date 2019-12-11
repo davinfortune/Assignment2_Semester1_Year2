@@ -18,6 +18,7 @@ public class  Main extends Application {
     private static int sceneIndex = 0;
     private static propertyAdmin admin = null;
     private static propertyAgent agent = null;
+    private static int currentPane;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -32,12 +33,12 @@ public class  Main extends Application {
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/loginAgent.fxml")));//index 6
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/homeScreenAgent.fxml")));//index 7
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/viewAllProperty.fxml")));//index 8
-        anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/updateProperty.fxml")));//index 9
 
         primaryStage.setTitle("Davt.ie");
         primaryStage.setScene(new Scene(root, 700, 550));
         primaryStage.show();
         Main.set_pane(0);
+        currentPane = 0;
     }
 
     public static propertyAdmin getAdmin() { return admin; }
@@ -54,14 +55,15 @@ public class  Main extends Application {
         }
     }
 
-    public static AnchorPane get_pane(int index){
-        return anchor.get(index);
+    public static int get_pane(){
+        return currentPane;
     }
 
     public static void set_pane(int index){
         root.getChildren().remove(anchor.get(sceneIndex));
         root.getChildren().add(anchor.get(index));
         sceneIndex=index;
+        currentPane = index;
     }
 
 

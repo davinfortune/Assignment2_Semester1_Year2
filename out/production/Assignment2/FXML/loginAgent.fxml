@@ -23,7 +23,7 @@
                 <Label layoutX="52.0" layoutY="80.0" prefHeight="17.0" prefWidth="71.0" text="Username" />
                 <Label layoutX="52.0" layoutY="115.0" prefHeight="17.0" prefWidth="71.0" text="Password" />
                 <Button layoutX="122.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleLoginBtn" text="Login" />
-                <TextArea fx:id="txtAreaFeedback" editable="false" layoutX="350.0" layoutY="252.0" prefHeight="102.0" prefWidth="186.0" />
+                <TextArea fx:id="txtFeedBack" editable="false" layoutX="350.0" layoutY="252.0" prefHeight="102.0" prefWidth="186.0" />
                 <Button layoutX="207.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleReturnHomeBtn" text="Return Home" />
             </children>
         </Pane>

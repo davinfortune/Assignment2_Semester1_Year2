@@ -88,6 +88,12 @@ public class PropertyController implements Initializable {
     @FXML
     private TableColumn<Property, Integer> idColumn;
     @FXML
+    private TableColumn<Property, String> descriptionColumn;
+    @FXML
+    private TableColumn<Property, String> townColumn;
+    @FXML
+    private TableColumn<Property, String> categoryColumn;
+    @FXML
     private TableColumn<Property, Double> priceColumn;
     @FXML
     private TableColumn<Property, String> countyColumn;
@@ -309,7 +315,26 @@ public class PropertyController implements Initializable {
         Main.set_pane(0);
     }
 
+    public void changeSceneToUpdateSceneBtn(ActionEvent e) throws IOException
+    {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/updateProperty.fxml"));
+        Parent tableViewParent = loader.load();
 
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        showImageController controller = loader.getController();
+        Property propertyToDisplay =(Property)tblView.getSelectionModel().getSelectedItem();
+        if(propertyToDisplay == null)
+            return;
+
+        controller.initData(propertyToDisplay);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
+    }
 
     public void changeSceneToDetailedViewBtn(ActionEvent e) throws IOException
     {
@@ -407,37 +432,32 @@ public class PropertyController implements Initializable {
     @Override
 
     public void initialize(URL location, ResourceBundle resources) {
+          try {
+              LinkListObjects tempPropertys;
+              ArrayList<Property> tableProperty = new ArrayList<>();
+              XStream xstream = new XStream(new DomDriver());
+              ObjectInputStream is = xstream.createObjectInputStream
+                      (new FileReader("saveFiles/property.xml"));
+              tempPropertys = (LinkListObjects) is.readObject();
+              is.close();
+              for (int i = 0; i < tempPropertys.size(); i++) {
+                  Property forProperty = (Property) tempPropertys.get(i);
+                  tableProperty.add(forProperty);
+              }
 
-        try {
-            LinkListObjects tempPropertys;
-            ArrayList<Property> tableProperty = new ArrayList<>();
-            XStream xstream = new XStream(new DomDriver());
-            ObjectInputStream is = xstream.createObjectInputStream
-                    (new FileReader("saveFiles/property.xml"));
-            tempPropertys = (LinkListObjects) is.readObject();
-            is.close();
-            for (int i = 0; i < tempPropertys.size(); i++) {
-                Property forProperty = (Property) tempPropertys.get(i);
-                tableProperty.add(forProperty);
-            }
+              ObservableList<Property> data = FXCollections.observableArrayList(tableProperty);
 
-            ObservableList<Property> data = FXCollections.observableArrayList(tableProperty);
-
-            idColumn.setCellValueFactory(new PropertyValueFactory<Property, Integer>("propertyId"));
-            priceColumn.setCellValueFactory(new PropertyValueFactory<Property, Double>("price"));
-            countyColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("locationGeneral"));
-            addressColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("address"));
-            eircodeColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("eircode"));
-
+              idColumn.setCellValueFactory(new PropertyValueFactory<Property, Integer>("propertyId"));
+              priceColumn.setCellValueFactory(new PropertyValueFactory<Property, Double>("price"));
+              countyColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("locationGeneral"));
+              addressColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("address"));
+              eircodeColumn.setCellValueFactory(new PropertyValueFactory<Property, String>("eircode"));
 
 
-            tblView.setItems(data);
-        }
-
-        catch (Exception e){
-            txtFeedBack.setText("Could Not Load Propertys");
-        }
-
+              tblView.setItems(data);
+          } catch (Exception e) {
+              txtFeedBack.setText("Could Not Load Propertys");
+          }
 
 
         property = new propertyModel();

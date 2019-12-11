@@ -17,11 +17,11 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.PropertyController">
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.AgentTableController">
     <children>
         <BorderPane layoutY="3.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <top>
-                <AnchorPane prefHeight="99.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+                <AnchorPane prefHeight="99.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
                     <children>
                         <Label layoutX="13.0" layoutY="30.0" prefHeight="35.0" prefWidth="121.0" text="Davt.ie">
                             <font>
@@ -41,61 +41,63 @@
                             <menus>
                                 <Menu mnemonicParsing="false" text="File">
                                     <items>
-                                        <MenuItem mnemonicParsing="false" onAction="#handleLoadPropertyBtn" text="Load Properties" />
-                                        <MenuItem mnemonicParsing="false" onAction="#handleLoadPropertyBtn" text="Display all Properties" />
-                                        <MenuItem mnemonicParsing="false" onAction="#handleSystemExitBtn" text="Exit System" />
+                                        <MenuItem mnemonicParsing="false" text="Load Properties" />
+                                        <MenuItem mnemonicParsing="false" text="Display all Properties" />
+                                        <MenuItem mnemonicParsing="false" text="Exit System" />
                                     </items>
                                 </Menu>
                                 <Menu mnemonicParsing="false" text="Edit">
                                     <items>
-                                        <MenuItem mnemonicParsing="false" onAction="#handleAddPropertyButton" text="Create Property" />
-                                        <MenuItem mnemonicParsing="false" onAction="#changeToUpdateScene" text="Update Property" />
-                                        <MenuItem mnemonicParsing="false" text="Delete Property" />
+                                        <MenuItem mnemonicParsing="false" text="Create Property" />
                                     </items>
                                 </Menu>
                                 <Menu mnemonicParsing="false" text="Account">
                                     <items>
-                                        <MenuItem mnemonicParsing="false" onAction="#handleLogOutBtn" text="Log Out" />
+                                        <MenuItem mnemonicParsing="false" text="Log Out" />
                                     </items>
                                 </Menu>
                             </menus>
                         </MenuBar>
-                        <Label layoutX="561.0" layoutY="10.0" prefHeight="40.0" prefWidth="79.0" text="Agent">
+                        <Label layoutX="896.0" layoutY="10.0" prefHeight="40.0" prefWidth="79.0" text="Agent">
                             <font>
                                 <Font size="28.0" />
                             </font>
                         </Label>
-                        <TextArea fx:id="txtFeedBack" editable="false" layoutX="480.0" layoutY="57.0" prefHeight="43.0" prefWidth="206.0" />
+                        <TextArea fx:id="txtFeedBack" editable="false" layoutX="780.0" layoutY="50.0" prefHeight="43.0" prefWidth="206.0" />
                     </children>
                 </AnchorPane>
             </top>
             <bottom>
                 <HBox prefHeight="388.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                     <children>
-                        <Pane prefHeight="388.0" prefWidth="613.0">
+                        <Pane prefHeight="388.0" prefWidth="1007.0">
                             <children>
-                                <HBox prefHeight="391.0" prefWidth="199.0" />
-                            <TableView fx:id="tblView" layoutX="14.0" layoutY="21.0" prefHeight="326.0" prefWidth="677.0" style="-fx-background-color: #FFFFFF;">
+                                <HBox prefHeight="391.0" prefWidth="1000.0" />
+                            <TableView fx:id="tblView" layoutX="14.0" layoutY="22.0" prefHeight="303.0" prefWidth="971.0" style="-fx-background-color: #FFFFFF;">
                                 <columns>
                                     <TableColumn fx:id="idColumn" prefWidth="88.0" text="ID" />
-                                    <TableColumn fx:id="priceColumn" minWidth="7.0" prefWidth="102.0" text="Price" />
-                                    <TableColumn fx:id="countyColumn" minWidth="0.0" prefWidth="114.0" text="County" />
-                                    <TableColumn fx:id="addressColumn" prefWidth="266.0" text="Address" />
-                                    <TableColumn fx:id="eircodeColumn" prefWidth="129.0" text="Eircode" />
+                                    <TableColumn fx:id="descriptionColumn" minWidth="7.0" prefWidth="139.0" text="Description" />
+                                    <TableColumn fx:id="addressColumn" minWidth="0.0" prefWidth="185.0" text="Address" />
+                                    <TableColumn fx:id="townColumn" minWidth="3.0" prefWidth="149.0" text="Town" />
+                              <TableColumn fx:id="countyColumn" prefWidth="129.0" text="County" />
+                              <TableColumn fx:id="categoryColumn" prefWidth="124.0" text="Type" />
+                              <TableColumn fx:id="priceColumn" prefWidth="156.0" text="Price" />
                                 </columns>
                             </TableView>
+                        <Button layoutX="460.0" layoutY="341.0" mnemonicParsing="false" text="Update" />
+                        <Button layoutX="548.0" layoutY="341.0" mnemonicParsing="false" text="Delete" />
                             </children>
                         </Pane>
                     </children></HBox>
             </bottom>
             <left>
-                <Pane prefHeight="71.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+                <Pane prefHeight="71.0" prefWidth="999.0" BorderPane.alignment="CENTER">
                     <children>
-                        <ComboBox fx:id="locationGeneralSelect" layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="County" style="-fx-background-color: #DCDCDC;" />
-                        <ComboBox fx:id="minPriceSelect" layoutX="208.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
-                        <ComboBox fx:id="maxPriceSelect" layoutX="312.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
-                        <ComboBox fx:id="categorySelect" layoutX="423.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
-                        <Button layoutX="621.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
+                        <ComboBox fx:id="locationGeneralSelect" layoutX="188.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="County" style="-fx-background-color: #DCDCDC;" />
+                        <ComboBox fx:id="minPriceSelect" layoutX="362.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
+                        <ComboBox fx:id="maxPriceSelect" layoutX="465.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
+                        <ComboBox fx:id="categorySelect" layoutX="574.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
+                        <Button fx:id="handleSearchButton" layoutX="783.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
                     </children>
                 </Pane>
             </left>
