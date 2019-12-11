@@ -50,7 +50,7 @@ public class showImageController {
 
         txtId.setText(""+property.getPropertyId()); //int to String
         txtDescription.setText(property.getDescription());
-        txtAddress.setText(property.getDescription());
+        txtAddress.setText(property.getAddress());
         txtlocationSpecific.setText(""+property.getLocationSpecific());
         txtBER.setText(""+property.getBER());
         txtCategory.setText(property.getCategory());

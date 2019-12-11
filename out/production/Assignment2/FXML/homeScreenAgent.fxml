@@ -51,11 +51,6 @@
                                         <MenuItem mnemonicParsing="false" text="Create Property" />
                                     </items>
                                 </Menu>
-                                <Menu mnemonicParsing="false" text="Account">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Log Out" />
-                                    </items>
-                                </Menu>
                             </menus>
                         </MenuBar>
                         <Label layoutX="896.0" layoutY="10.0" prefHeight="40.0" prefWidth="79.0" text="Agent">
@@ -64,6 +59,7 @@
                             </font>
                         </Label>
                         <TextArea fx:id="txtFeedBack" editable="false" layoutX="780.0" layoutY="50.0" prefHeight="43.0" prefWidth="206.0" />
+                  <Button layoutX="780.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogOutBtn" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #F90000;" text="Log Out" textFill="WHITE" />
                     </children>
                 </AnchorPane>
             </top>
@@ -73,7 +69,7 @@
                         <Pane prefHeight="388.0" prefWidth="1007.0">
                             <children>
                                 <HBox prefHeight="391.0" prefWidth="1000.0" />
-                            <TableView fx:id="tblView" layoutX="14.0" layoutY="22.0" prefHeight="303.0" prefWidth="971.0" style="-fx-background-color: #FFFFFF;">
+                            <TableView fx:id="tableViewAgent" layoutX="14.0" layoutY="22.0" prefHeight="303.0" prefWidth="971.0" style="-fx-background-color: #FFFFFF;">
                                 <columns>
                                     <TableColumn fx:id="idColumn" prefWidth="88.0" text="ID" />
                                     <TableColumn fx:id="descriptionColumn" minWidth="7.0" prefWidth="139.0" text="Description" />
@@ -84,7 +80,7 @@
                               <TableColumn fx:id="priceColumn" prefWidth="156.0" text="Price" />
                                 </columns>
                             </TableView>
-                        <Button layoutX="460.0" layoutY="341.0" mnemonicParsing="false" text="Update" />
+                        <Button layoutX="460.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleUpdatePropertyBtn" text="Update" />
                         <Button layoutX="548.0" layoutY="341.0" mnemonicParsing="false" text="Delete" />
                             </children>
                         </Pane>
@@ -97,7 +93,7 @@
                         <ComboBox fx:id="minPriceSelect" layoutX="362.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
                         <ComboBox fx:id="maxPriceSelect" layoutX="465.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
                         <ComboBox fx:id="categorySelect" layoutX="574.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
-                        <Button fx:id="handleSearchButton" layoutX="783.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
+                        <Button layoutX="783.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
                     </children>
                 </Pane>
             </left>

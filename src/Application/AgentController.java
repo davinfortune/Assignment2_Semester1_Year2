@@ -40,6 +40,8 @@ public class AgentController {
             txtFeedBack.setText("Username and Password need \nto be 4 characters or more");
         }
         else if(login(txtUsername.getText(),txtPassword.getText())){
+            txtUsername.setText("");
+            txtPassword.setText("");
             Main.set_pane(7);
         }
         else {

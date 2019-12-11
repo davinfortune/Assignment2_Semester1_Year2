@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.PropertyController">
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.PropertyController">
     <children>
-        <Pane layoutX="2.0" prefHeight="497.0" prefWidth="646.0">
+        <Pane layoutX="195.0" layoutY="2.0" prefHeight="497.0" prefWidth="646.0">
             <children>
                 <Label layoutX="14.0" layoutY="14.0" prefHeight="56.0" prefWidth="138.0" text="Create a Property">
                     <font>
@@ -35,12 +35,12 @@
                 <Label layoutX="38.0" layoutY="373.0" prefHeight="17.0" prefWidth="73.0" text="Eircode" />
                 <Label layoutX="38.0" layoutY="408.0" prefHeight="17.0" prefWidth="73.0" text="Price" />
                 <Button layoutX="360.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleAddPropertyBtn" text="Create" />
-                <TextArea fx:id="txtFeedBack" layoutX="347.0" layoutY="338.0" prefHeight="132.0" prefWidth="204.0" />
                 <Label layoutX="310.0" layoutY="84.0" prefHeight="17.0" prefWidth="83.0" text="Property Type" />
                 <Label layoutX="347.0" layoutY="141.0" prefHeight="17.0" prefWidth="44.0" text="County" />
                 <Button layoutX="467.0" layoutY="291.0" mnemonicParsing="false" text="Return home" />
             <Button layoutX="402.0" layoutY="205.0" mnemonicParsing="false" onAction="#selectImageButtonPressed" text="Upload an Image" />
             <TextField fx:id="txtPath" layoutX="303.0" layoutY="235.0" prefHeight="25.0" prefWidth="304.0" />
+                <TextArea fx:id="txtFeedBack" layoutX="365.0" layoutY="345.0" prefHeight="132.0" prefWidth="204.0" />
             </children>
         </Pane>
     </children>

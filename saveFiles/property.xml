@@ -2,15 +2,15 @@
   <ApplicationModels.LinkListObjects>
     <first>
       <data class="ApplicationModels.Property">
-        <propertyId>7254829</propertyId>
+        <propertyId>123512</propertyId>
         <description>4 Bedroom 2 Bathroom</description>
-        <address>Willow Wasp</address>
+        <address>9 Melon Heights</address>
         <category>Detached House</category>
         <locationGeneral>Co.Limerick</locationGeneral>
-        <locationSpecific>Kill Thomas</locationSpecific>
-        <BER>125DGFS</BER>
-        <eircode>X95X4F3</eircode>
-        <price>342000.0</price>
+        <locationSpecific>KillsTown</locationSpecific>
+        <BER>123DD</BER>
+        <eircode>X73D123</eircode>
+        <price>475000.0</price>
         <imagePath>/img/1-3.jpg</imagePath>
       </data>
       <next>
@@ -206,15 +206,16 @@
                                     </data>
                                     <next>
                                       <data class="ApplicationModels.Property">
-                                        <propertyId>12345</propertyId>
-                                        <description>DDD</description>
-                                        <address>DDDD</address>
-                                        <category>Apartment</category>
-                                        <locationGeneral>Co.Waterford</locationGeneral>
-                                        <locationSpecific>DDDD</locationSpecific>
-                                        <BER>DD</BER>
-                                        <eircode>DDDD</eircode>
-                                        <price>12345.0</price>
+                                        <propertyId>123512</propertyId>
+                                        <description>4 Bedroom 2 Bathroom</description>
+                                        <address>8 Try Fallows</address>
+                                        <category>Detached House</category>
+                                        <locationGeneral>Co.Limerick</locationGeneral>
+                                        <locationSpecific>KillsTown</locationSpecific>
+                                        <BER>123DD</BER>
+                                        <eircode>X73D123</eircode>
+                                        <price>475000.0</price>
+                                        <imagePath>/img/5045d31d4bcce03d9de4f05976219417_XL.jpg</imagePath>
                                       </data>
                                       <outer-class reference="../../../../../../../../../../../../../../../../../.."/>
                                     </next>

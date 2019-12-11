@@ -18,7 +18,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.PropertyController">
+<AnchorPane prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.PropertyController">
    <children>
       <BorderPane layoutY="3.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -64,7 +64,7 @@
                         </Menu>
                      </menus>
                   </MenuBar>
-                  <TextArea fx:id="txtFeedBack" accessibleRole="TEXT" editable="false" layoutX="518.0" layoutY="14.0" prefHeight="56.0" prefWidth="155.0">
+                  <TextArea fx:id="txtFeedBack" accessibleRole="TEXT" editable="false" layoutX="825.0" layoutY="20.0" prefHeight="56.0" prefWidth="155.0">
                      <cursor>
                         <Cursor fx:constant="DISAPPEAR" />
                      </cursor>
@@ -81,7 +81,7 @@
                   <Pane prefHeight="388.0" prefWidth="613.0">
                      <children>
                         <HBox prefHeight="391.0" prefWidth="199.0" />
-                        <TableView fx:id="tblView" layoutX="50.0" layoutY="9.0" prefHeight="327.0" prefWidth="609.0" style="-fx-background-color: #FFFFFF;">
+                        <TableView fx:id="tblView" layoutX="171.0" layoutY="14.0" prefHeight="327.0" prefWidth="609.0" style="-fx-background-color: #FFFFFF;">
                           <columns>
                             <TableColumn fx:id="idColumn" prefWidth="94.0" text="ID" />
                             <TableColumn fx:id="priceColumn" minWidth="7.0" prefWidth="127.0" text="Price" />
@@ -90,19 +90,19 @@
                               <TableColumn fx:id="eircodeColumn" prefWidth="81.0" text="Eircode" />
                           </columns>
                         </TableView>
-                        <Button layoutX="523.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeSceneToDetailedViewBtn" text="View Detail" />
+                        <Button layoutX="451.0" layoutY="349.0" mnemonicParsing="false" onAction="#changeSceneToDetailedViewBtn" text="View Detail" />
                      </children>
                   </Pane>
                </children></HBox>
          </bottom>
          <left>
-            <Pane prefHeight="71.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="94.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
                <children>
-                  <ComboBox fx:id="locationGeneralSelect" layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="County" style="-fx-background-color: #DCDCDC;" />
-                  <ComboBox fx:id="minPriceSelect" layoutX="208.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
-                  <ComboBox fx:id="maxPriceSelect" layoutX="312.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
-                  <ComboBox fx:id="categorySelect" layoutX="423.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
-                  <Button layoutX="621.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
+                  <ComboBox fx:id="locationGeneralSelect" layoutX="180.0" layoutY="28.0" prefHeight="25.0" prefWidth="168.0" promptText="County" style="-fx-background-color: #DCDCDC;" />
+                  <ComboBox fx:id="minPriceSelect" layoutX="364.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
+                  <ComboBox fx:id="maxPriceSelect" layoutX="486.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
+                  <ComboBox fx:id="categorySelect" layoutX="591.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
+                  <Button layoutX="802.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
                </children>
             </Pane>
          </left>

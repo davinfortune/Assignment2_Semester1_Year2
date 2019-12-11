@@ -6,28 +6,27 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.showImageController">
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.showImageController">
    <children>
-      <Label layoutX="272.0" layoutY="52.0" prefHeight="17.0" prefWidth="76.0" text="Property ID :" />
-      <ImageView fx:id="propertyImage" fitHeight="197.0" fitWidth="217.0" layoutX="41.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField fx:id="txtId" editable="false" layoutX="348.0" layoutY="48.0" />
-      <Label layoutX="272.0" layoutY="88.0" prefHeight="17.0" prefWidth="76.0" text="Description :" />
-      <TextField fx:id="txtDescription" editable="false" layoutX="348.0" layoutY="84.0" prefHeight="106.0" prefWidth="149.0" />
-      <Label layoutX="41.0" layoutY="240.0" prefHeight="17.0" prefWidth="76.0" text="Address :" />
-      <TextField fx:id="txtAddress" editable="false" layoutX="109.0" layoutY="236.0" prefHeight="56.0" prefWidth="149.0" />
-      <Label layoutX="41.0" layoutY="301.0" prefHeight="17.0" prefWidth="54.0" text="Town :" />
-      <TextField fx:id="txtlocationSpecific" editable="false" layoutX="109.0" layoutY="301.0" prefHeight="17.0" prefWidth="149.0" />
-      <Label layoutX="41.0" layoutY="341.0" prefHeight="17.0" prefWidth="54.0" text="County :" />
-      <TextField fx:id="txtCounty" editable="false" layoutX="109.0" layoutY="337.0" prefHeight="17.0" prefWidth="149.0" />
-      <Label layoutX="300.0" layoutY="204.0" prefHeight="17.0" prefWidth="40.0" text="Price :" />
-      <TextField fx:id="txtPrice" editable="false" layoutX="348.0" layoutY="200.0" />
-      <Label layoutX="300.0" layoutY="240.0" prefHeight="17.0" prefWidth="40.0" text="BER :" />
-      <TextField fx:id="txtBER" editable="false" layoutX="348.0" layoutY="236.0" />
-      <TextField fx:id="txtEircode" editable="false" layoutX="348.0" layoutY="272.0" />
-      <Label layoutX="283.0" layoutY="276.0" prefHeight="17.0" prefWidth="54.0" text="Eircode :" />
-      <Label layoutX="283.0" layoutY="305.0" prefHeight="17.0" prefWidth="54.0" text="Type :" />
-      <TextField fx:id="txtCategory" editable="false" layoutX="348.0" layoutY="306.0" prefHeight="17.0" prefWidth="149.0" />
-      <Button layoutX="384.0" layoutY="350.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Return Home" />
+      <Label layoutX="30.0" layoutY="52.0" prefHeight="17.0" prefWidth="76.0" text="Property ID :" />
+      <ImageView fx:id="propertyImage" fitHeight="380.0" fitWidth="430.0" layoutX="546.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txtId" editable="false" layoutX="109.0" layoutY="48.0" />
+      <Label layoutX="30.0" layoutY="94.0" prefHeight="17.0" prefWidth="76.0" text="Description :" />
+      <TextField fx:id="txtDescription" editable="false" layoutX="109.0" layoutY="84.0" prefHeight="106.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="217.0" prefHeight="17.0" prefWidth="76.0" text="Address :" />
+      <TextField fx:id="txtAddress" editable="false" layoutX="109.0" layoutY="212.0" prefHeight="56.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="285.0" prefHeight="17.0" prefWidth="54.0" text="Town :" />
+      <TextField fx:id="txtlocationSpecific" editable="false" layoutX="109.0" layoutY="281.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="41.0" layoutY="323.0" prefHeight="17.0" prefWidth="54.0" text="County :" />
+      <TextField fx:id="txtCounty" editable="false" layoutX="109.0" layoutY="319.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="48.0" layoutY="360.0" prefHeight="17.0" prefWidth="40.0" text="Price :" />
+      <TextField fx:id="txtPrice" editable="false" layoutX="109.0" layoutY="356.0" />
+      <Label layoutX="48.0" layoutY="398.0" prefHeight="17.0" prefWidth="40.0" text="BER :" />
+      <TextField fx:id="txtBER" editable="false" layoutX="109.0" layoutY="394.0" />
+      <TextField fx:id="txtEircode" editable="false" layoutX="337.0" layoutY="48.0" />
+      <Label layoutX="283.0" layoutY="52.0" prefHeight="17.0" prefWidth="54.0" text="Eircode :" />
+      <Label layoutX="283.0" layoutY="94.0" prefHeight="17.0" prefWidth="54.0" text="Type :" />
+      <TextField fx:id="txtCategory" editable="false" layoutX="337.0" layoutY="90.0" prefHeight="17.0" prefWidth="149.0" />
+      <Button layoutX="399.0" layoutY="394.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Return Home" />
    </children>
 </AnchorPane>

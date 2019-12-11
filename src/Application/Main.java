@@ -33,12 +33,12 @@ public class  Main extends Application {
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/loginAgent.fxml")));//index 6
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/homeScreenAgent.fxml")));//index 7
         anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/viewAllProperty.fxml")));//index 8
+        anchor.add((AnchorPane)FXMLLoader.load(getClass().getResource("/FXML/updateProperty.fxml")));//index 9
 
         primaryStage.setTitle("Davt.ie");
-        primaryStage.setScene(new Scene(root, 700, 550));
+        primaryStage.setScene(new Scene(root, 1000, 550));
         primaryStage.show();
         Main.set_pane(0);
-        currentPane = 0;
     }
 
     public static propertyAdmin getAdmin() { return admin; }
@@ -51,7 +51,6 @@ public class  Main extends Application {
 
     private void init_app(){
         for(int i=0; i<anchor.size();i++){
-            //can be used to initiate some details about each pane
         }
     }
 
@@ -63,7 +62,6 @@ public class  Main extends Application {
         root.getChildren().remove(anchor.get(sceneIndex));
         root.getChildren().add(anchor.get(index));
         sceneIndex=index;
-        currentPane = index;
     }
 
 

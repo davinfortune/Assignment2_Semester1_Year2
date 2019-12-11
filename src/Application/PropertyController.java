@@ -175,50 +175,6 @@ public class PropertyController implements Initializable {
     }
 
 
-/*
-
-    public void handleReadPropertyBtn(ActionEvent e) throws Exception{
-        int index = Integer.parseInt(txtDeleteIndex.getText());
-        if(property. == 0){
-            if(index <= property.propertys.size()) {
-                property.loadProperty();
-                txtAreaPropertyInfo.setText(property.listAllLowDetailProperties());
-
-                txtId.setText(Integer.toString(property.propertys.get(index).getPropertyId()));
-                txtDescription.setText(property.propertys.get(index).getDescription());
-                txtAddress.setText(property.propertys.get(index).getAddress());
-                categorySelect.setValue(property.propertys.get(index).getCategory());
-                locationGeneralSelect.setValue(property.propertys.get(index).getLocationGeneral());
-                txtlocationSpecific.setText(property.propertys.get(index).getLocationSpecific());
-                txtBER.setText(property.propertys.get(index).getBER());
-                txtEircode.setText(property.propertys.get(index).getEircode());
-                txtPrice.setText(Double.toString(property.propertys.get(index).getPrice()));
-            }
-            else{
-                txtFeedBack.setText("Please enter a vaild Property Number");
-            }
-        }
-        else{
-            if(index <= property.propertys.size()) {
-                txtId.setText(Integer.toString(property.propertys.get(index).getPropertyId()));
-                txtDescription.setText(property.propertys.get(index).getDescription());
-                txtAddress.setText(property.propertys.get(index).getAddress());
-                categorySelect.setValue(property.propertys.get(index).getCategory());
-                locationGeneralSelect.setValue(property.propertys.get(index).getLocationGeneral());
-                txtlocationSpecific.setText(property.propertys.get(index).getLocationSpecific());
-                txtBER.setText(property.propertys.get(index).getBER());
-                txtEircode.setText(property.propertys.get(index).getEircode());
-                txtPrice.setText(Double.toString(property.propertys.get(index).getPrice()));
-            }
-            else{
-                txtFeedBack.setText("Please enter a vaild Property Number");
-            }
-        }
-        updateButton.setDisable(false);
-    }
-*/
-
-
 
 
     public void handleUpdatePropertyBtn(ActionEvent e) throws Exception{
@@ -235,28 +191,6 @@ public class PropertyController implements Initializable {
         Main.set_pane(2);
     }
 
-
-
-
-
-/*    public void handleDeleteButton(ActionEvent e) throws Exception {
-        int index = Integer.parseInt(txtDeleteIndex.getText());
-        if (index <= property.propertys.size() && index >= 0) {
-            property.deleteProperty(index);
-            XStream xstream = new XStream(new DomDriver());
-            try {
-                ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("property.xml"));
-                out.writeObject(property.propertys);
-                out.close();
-            } catch (Exception t) {
-                txtFeedBack.setText("Error Deleting the Property");
-            }
-        } else {
-            txtFeedBack.setText("Please Enter a Valid \nProperty Number to Delete");
-        }
-        Main.set_pane(2);
-        txtAreaPropertyInfo.setText(property.listAllLowDetailProperties());
-    }*/
 
     public void handleSearchButton(ActionEvent e) throws Exception {
         String category = categorySelect.getValue();
@@ -313,27 +247,6 @@ public class PropertyController implements Initializable {
 
     public void handleLogOutBtn(ActionEvent e) throws Exception{
         Main.set_pane(0);
-    }
-
-    public void changeSceneToUpdateSceneBtn(ActionEvent e) throws IOException
-    {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/FXML/updateProperty.fxml"));
-        Parent tableViewParent = loader.load();
-
-        Scene tableViewScene = new Scene(tableViewParent);
-
-        showImageController controller = loader.getController();
-        Property propertyToDisplay =(Property)tblView.getSelectionModel().getSelectedItem();
-        if(propertyToDisplay == null)
-            return;
-
-        controller.initData(propertyToDisplay);
-
-        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
-
-        window.setScene(tableViewScene);
-        window.show();
     }
 
     public void changeSceneToDetailedViewBtn(ActionEvent e) throws IOException
