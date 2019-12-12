@@ -3,23 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Application/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/Application/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Application/AgentTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/Application/AgentTableController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/Application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Application/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/Application/PropertyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAgentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/registerControllers/registerAgentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFiles/admins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saveFiles/admins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFiles/agents.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saveFiles/agents.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFiles/property.xml" beforeDir="false" afterPath="$PROJECT_DIR$/saveFiles/property.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/AgentTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/AgentTableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenAgent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenAgent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenGeneral.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignment2/FXML/homeScreenGeneral.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FXML/homeScreenAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/homeScreenAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registerControllers/registerAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerControllers/registerAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registerControllers/registerAgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerControllers/registerAgentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/homeScreenAgent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/homeScreenAgent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FXML/homeScreenGeneral.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/FXML/homeScreenGeneral.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,39 +62,44 @@
     <session id="45893463">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="6" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="CSS" value="1" />
+          <entry key="css" value="1" />
           <entry key="fxml" value="22" />
-          <entry key="java" value="67" />
+          <entry key="java" value="74" />
           <entry key="jpg" value="9" />
           <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CSS" value="2" />
           <entry key="Image" value="9" />
-          <entry key="JAVA" value="67" />
+          <entry key="JAVA" value="74" />
           <entry key="XML" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="css" value="11" />
           <entry key="fxml" value="100" />
-          <entry key="java" value="7599" />
+          <entry key="java" value="8912" />
           <entry key="xml" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7599" />
+          <entry key="CSS" value="11" />
+          <entry key="JAVA" value="8912" />
           <entry key="XML" value="139" />
         </counts>
       </usages-collector>
@@ -143,102 +138,16 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/showImageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saveFiles/agents.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/saveFiles/property.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="42" column="53" lean-forward="true" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/img/NDIwMWUxZmZhZTFlMTIzNGU4YjA1ZjhmZTMwMTRkZjnqbRl5javlxk8A8mXhvujjaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvNC81LzQ1NGJhNDQ5NmIyZGRhOGFlOGExMDEzMGM3ODdhNGE0LmpwZ3x8fHx8fDY0MHg0MjB8fHx8.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/img/ZGFhMWU0MzkwYjM5YzYwM2Q2ODYyNTE0MWE4NTEyYzQ2eqYt2PoATVf_uGRPeVGBaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvNC9kLzRkZjM3ZWViMDBlODgzOWIyZDI0YzNkZTIxNjY5MDI1LmpwZ3x8fHx8fDc5MHg0NzB8fHx8.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/img/ZGRmZGI1NWE4NGYyOWQwZGFhNTI2MGIyNDEzYjRlODV26AQjnXRHGi8Q2K6mV3zjaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvOS9hLzlhZmY3YjE5YzFjZmIwZDgzNzY5ODM5NWRiMDFkNzU5LmpwZ3x8fHx8fDc5MHg0NzB8fHx8.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/AdminTableController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2329">
-              <caret line="163" column="89" selection-start-line="163" selection-start-column="89" selection-end-line="163" selection-end-column="89" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/registerControllers/registerAgentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="105" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/registerControllers/registerAdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="75" column="78" selection-start-line="75" selection-start-column="78" selection-end-line="75" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/AgentTableController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5066">
-              <caret line="328" column="64" selection-start-line="328" selection-start-column="64" selection-end-line="328" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Unnamed" />
+        <option value="Unnamed (1)" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -288,7 +197,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/FXML/viewAllProperty.fxml" />
-        <option value="$PROJECT_DIR$/src/MethodModels/propertyModel.java" />
         <option value="$PROJECT_DIR$/src/ApplicationModels/Property.java" />
         <option value="$PROJECT_DIR$/saveFiles/property.xml" />
         <option value="$PROJECT_DIR$/src/FXML/homeScreenAgent.fxml" />
@@ -305,6 +213,11 @@
         <option value="$PROJECT_DIR$/src/registerControllers/registerAgentController.java" />
         <option value="$PROJECT_DIR$/src/registerControllers/registerAdminController.java" />
         <option value="$PROJECT_DIR$/src/Application/Main.java" />
+        <option value="$PROJECT_DIR$/src/CSS/style.css" />
+        <option value="$PROJECT_DIR$/src/MethodModels/propertyModel.java" />
+        <option value="$PROJECT_DIR$/testing/MethodModels/propertyModelTest.java" />
+        <option value="$PROJECT_DIR$/testing/ApplicationModels/PropertyTest.java" />
+        <option value="$PROJECT_DIR$/testing/ApplicationModels/propertyAgentTest.java" />
       </list>
     </option>
   </component>
@@ -326,17 +239,14 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Assignment2_Semester1_Year2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment2_Semester1_Year2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Assignment2_Semester1_Year2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment2_Semester1_Year2" type="462c0819:PsiDirectoryNode" />
-              <item name="saveFiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Assignment2_Semester1_Year2" type="b2602c69:ProjectViewProjectNode" />
@@ -358,27 +268,18 @@
             <path>
               <item name="Assignment2_Semester1_Year2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment2_Semester1_Year2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FXML" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Assignment2_Semester1_Year2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment2_Semester1_Year2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Assignment2_Semester1_Year2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Assignment2_Semester1_Year2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="registerControllers" type="462c0819:PsiDirectoryNode" />
+              <item name="testing" type="462c0819:PsiDirectoryNode" />
+              <item name="ApplicationModels" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,7 +296,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576155456527" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576159354820" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -408,8 +309,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="MethodModels" />
       <recent name="ApplicationModels" />
+      <recent name="MethodModels" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -427,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.propertyAgentTest.mainTest">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -482,7 +383,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PropertyTest.mainTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ApplicationModels.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ApplicationModels" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationModels.PropertyTest" />
+      <option name="METHOD_NAME" value="mainTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="propertyAgentTest.mainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ApplicationModels.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ApplicationModels" />
+      <option name="MAIN_CLASS_NAME" value="ApplicationModels.propertyAgentTest" />
+      <option name="METHOD_NAME" value="mainTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -535,9 +476,13 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.propertyModel" />
       <item itemvalue="JUnit.propertyModelTest.loadProperty" />
+      <item itemvalue="JUnit.PropertyTest.mainTests" />
+      <item itemvalue="JUnit.propertyAgentTest.mainTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.propertyAgentTest.mainTest" />
+        <item itemvalue="JUnit.PropertyTest.mainTests" />
         <item itemvalue="JUnit.propertyModelTest.loadProperty" />
         <item itemvalue="Application.propertyModel" />
       </list>
@@ -564,6 +509,21 @@
     <history-entry file="propertyModelTest_loadProperty - 2019.11.28 at 18h 44m 11s.xml">
       <configuration name="propertyModelTest.loadProperty" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PropertyTest_mainTests - 2019.12.12 at 13h 46m 27s.xml">
+      <configuration name="PropertyTest.mainTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PropertyTest_mainTests - 2019.12.12 at 13h 47m 55s.xml">
+      <configuration name="PropertyTest.mainTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PropertyTest_mainTests - 2019.12.12 at 13h 48m 07s.xml">
+      <configuration name="PropertyTest.mainTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PropertyTest_mainTests - 2019.12.12 at 13h 52m 16s.xml">
+      <configuration name="PropertyTest.mainTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="propertyAgentTest_mainTest - 2019.12.12 at 14h 02m 37s.xml">
+      <configuration name="propertyAgentTest.mainTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1302000" />
@@ -571,8 +531,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15831557" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.15991472" />
+      <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" visible="true" weight="0.15991472" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -626,6 +586,9 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -721,24 +684,10 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MethodModels/propertyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-622">
           <caret line="62" column="76" selection-start-line="62" selection-start-column="76" selection-end-line="62" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApplicationModels/Property.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -781,29 +730,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ApplicationModels/propertyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/PropertyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveFiles/agents.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/NDIwMWUxZmZhZTFlMTIzNGU4YjA1ZjhmZTMwMTRkZjnqbRl5javlxk8A8mXhvujjaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvNC81LzQ1NGJhNDQ5NmIyZGRhOGFlOGExMDEzMGM3ODdhNGE0LmpwZ3x8fHx8fDY0MHg0MjB8fHx8.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/ZGFhMWU0MzkwYjM5YzYwM2Q2ODYyNTE0MWE4NTEyYzQ2eqYt2PoATVf_uGRPeVGBaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvNC9kLzRkZjM3ZWViMDBlODgzOWIyZDI0YzNkZTIxNjY5MDI1LmpwZ3x8fHx8fDc5MHg0NzB8fHx8.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/ZGRmZGI1NWE4NGYyOWQwZGFhNTI2MGIyNDEzYjRlODV26AQjnXRHGi8Q2K6mV3zjaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvOS9hLzlhZmY3YjE5YzFjZmIwZDgzNzY5ODM5NWRiMDFkNzU5LmpwZ3x8fHx8fDc5MHg0NzB8fHx8.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/AdminTableController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -829,46 +777,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/AgentTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5066">
-          <caret line="328" column="64" selection-start-line="328" selection-start-column="64" selection-end-line="328" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/showImageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="50" column="51" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+        <state relative-caret-position="160">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saveFiles/agents.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/ZGFhMWU0MzkwYjM5YzYwM2Q2ODYyNTE0MWE4NTEyYzQ2eqYt2PoATVf_uGRPeVGBaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvNC9kLzRkZjM3ZWViMDBlODgzOWIyZDI0YzNkZTIxNjY5MDI1LmpwZ3x8fHx8fDc5MHg0NzB8fHx8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/ZGRmZGI1NWE4NGYyOWQwZGFhNTI2MGIyNDEzYjRlODV26AQjnXRHGi8Q2K6mV3zjaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvOS9hLzlhZmY3YjE5YzFjZmIwZDgzNzY5ODM5NWRiMDFkNzU5LmpwZ3x8fHx8fDc5MHg0NzB8fHx8.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/NDIwMWUxZmZhZTFlMTIzNGU4YjA1ZjhmZTMwMTRkZjnqbRl5javlxk8A8mXhvujjaHR0cDovL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tL21lZGlhbWFzdGVyLXMzZXUvNC81LzQ1NGJhNDQ5NmIyZGRhOGFlOGExMDEzMGM3ODdhNGE0LmpwZ3x8fHx8fDY0MHg0MjB8fHx8.jpg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/saveFiles/property.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="42" column="53" lean-forward="true" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CSS/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/MethodModels/propertyModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MethodModels/propertyModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApplicationModels/Property.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/ApplicationModels/PropertyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="30" selection-start-line="30" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testing/ApplicationModels/propertyAgentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ApplicationModels/propertyAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/PropertyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/AgentTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="311" column="9" lean-forward="true" selection-start-line="311" selection-start-column="9" selection-end-line="311" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

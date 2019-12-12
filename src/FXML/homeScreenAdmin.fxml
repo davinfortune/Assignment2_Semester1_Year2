@@ -39,7 +39,7 @@
                             </font>
                         </Label>
                         <TextArea fx:id="txtFeedBack" editable="false" layoutX="618.0" layoutY="16.0" prefHeight="65.0" prefWidth="217.0" />
-                  <Button layoutX="895.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleLogOutBtn" text="Log Out" />
+                  <Button id="round-red" layoutX="895.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleLogOutBtn" stylesheets="@../CSS/style.css" text="Log Out" />
                     </children>
                 </AnchorPane>
             </top>

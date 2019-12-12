@@ -40,7 +40,7 @@
                             </font>
                         </Label>
                         <TextArea fx:id="txtFeedBack" editable="false" layoutX="780.0" layoutY="50.0" prefHeight="43.0" prefWidth="206.0" />
-                  <Button layoutX="780.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogOutBtn" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #F90000;" text="Log Out" textFill="WHITE" />
+                  <Button id="round-red" layoutX="780.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogOutBtn" prefHeight="25.0" prefWidth="79.0" stylesheets="@../CSS/style.css" text="Log Out" textFill="WHITE" />
                   <Button layoutY="-3.0" mnemonicParsing="false" onAction="#handleAddAgentBtn" style="-fx-background-color: #FFFFFF;" text="Create " />
                     </children>
                 </AnchorPane>
@@ -75,7 +75,7 @@
                         <ComboBox fx:id="minPriceSelect" layoutX="362.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
                         <ComboBox fx:id="maxPriceSelect" layoutX="465.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
                         <ComboBox fx:id="categorySelect" layoutX="574.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
-                        <Button layoutX="783.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
+                        <Button id="round-red" layoutX="783.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" stylesheets="@../CSS/style.css" text="Search" textFill="WHITE" />
                     </children>
                 </Pane>
             </left>

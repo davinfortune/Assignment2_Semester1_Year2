@@ -46,7 +46,7 @@
                   <Button layoutX="91.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleLoginAgentBtn" prefHeight="21.0" prefWidth="87.0" style="-fx-background-color: #FFFFFF;" text="Agent Login" />
                   <Button mnemonicParsing="false" onAction="#handleLoginAdminButton" prefHeight="28.0" prefWidth="88.0" style="-fx-background-color: #FFFFFF;" text="Admin Login" />
                   <Button layoutX="183.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleRegisterAdminButton" prefHeight="20.0" prefWidth="104.0" style="-fx-background-color: #FFFFFF;" text="Admin Register" />
-                  <Button layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSystemExitBtn" style="-fx-background-color: #F90000;" text="Exit System" textFill="WHITE" />
+                  <Button id="round-red" layoutX="739.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleSystemExitBtn" stylesheets="@../CSS/style.css" text="Exit System" textFill="WHITE" />
                </children>
             </AnchorPane>
          </top>
@@ -77,7 +77,7 @@
                   <ComboBox fx:id="minPriceSelect" layoutX="364.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Min" style="-fx-background-color: DCDCDC;" />
                   <ComboBox fx:id="maxPriceSelect" layoutX="486.0" layoutY="28.0" prefHeight="25.0" prefWidth="94.0" promptText="Max" style="-fx-background-color: DCDCDC;" />
                   <ComboBox fx:id="categorySelect" layoutX="591.0" layoutY="28.0" prefHeight="25.0" prefWidth="178.0" promptText="Property Type" style="-fx-background-color: DCDCDC;" />
-                  <Button layoutX="802.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" style="-fx-background-color: #F90000;" text="Search" textFill="WHITE" />
+                  <Button id="round-red" layoutX="802.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleSearchButton" stylesheets="@../CSS/style.css" text="Search" textFill="WHITE" />
                </children>
             </Pane>
          </left>

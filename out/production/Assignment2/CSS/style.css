@@ -1,0 +1,7 @@
+#round-red {
+    -fx-background-color: linear-gradient(#F90000, #be1d00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
