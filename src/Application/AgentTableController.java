@@ -178,7 +178,16 @@ public class AgentTableController implements Initializable {
 
 
     public void handleLogOutBtn(ActionEvent e) throws Exception{
-        System.exit(0);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/homeScreenGeneral.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
     public void handleAddAgentBtn(ActionEvent e) throws Exception{

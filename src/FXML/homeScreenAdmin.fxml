@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -16,7 +13,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.AgentController">
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.AdminTableController">
     <children>
         <BorderPane layoutY="3.0" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <top>
@@ -36,35 +33,13 @@
                                 </LinearGradient>
                             </textFill>
                         </Label>
-                        <MenuBar layoutY="-3.0" prefHeight="25.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">
-                            <menus>
-                                <Menu mnemonicParsing="false" text="File">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Load Agents" />
-                                        <MenuItem mnemonicParsing="false" text="Exit System" />
-                                    </items>
-                                </Menu>
-                                <Menu mnemonicParsing="false" text="Edit">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" onAction="#handleAddAgentBtn" text="Create Agent" />
-                                        <MenuItem mnemonicParsing="false" text="Update Agent" />
-                                        <MenuItem mnemonicParsing="false" text="Delete Agent" />
-                                    </items>
-                                </Menu>
-                                <Menu mnemonicParsing="false" text="Account">
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" text="Log Out" />
-                                    </items>
-                                </Menu>
-                            </menus>
-                        </MenuBar>
-                        <Label layoutX="512.0" layoutY="13.0" prefHeight="44.0" prefWidth="144.0" text="Administrator">
+                        <Label layoutX="849.0" layoutY="8.0" prefHeight="44.0" prefWidth="144.0" text="Administrator">
                             <font>
                                 <Font size="23.0" />
                             </font>
                         </Label>
-                        <Button layoutX="600.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #F90000;" text="List All Agents" textFill="WHITE" />
-                        <TextArea fx:id="txtAreaFeedback" layoutX="280.0" layoutY="16.0" prefHeight="65.0" prefWidth="217.0" />
+                        <TextArea fx:id="txtFeedBack" editable="false" layoutX="618.0" layoutY="16.0" prefHeight="65.0" prefWidth="217.0" />
+                  <Button layoutX="895.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleLogOutBtn" text="Log Out" />
                     </children>
                 </AnchorPane>
             </top>
@@ -73,19 +48,19 @@
                     <children>
                         <Pane prefHeight="431.0" prefWidth="699.0">
                             <children>
-                                <HBox prefHeight="391.0" prefWidth="199.0">
-                                    <children>
-                                        <TextArea fx:id="txtListAllAgents" prefHeight="200.0" prefWidth="200.0">
-                                            <HBox.margin>
-                                                <Insets bottom="25.0" left="25.0" />
-                                            </HBox.margin>
-                                        </TextArea>
-                                    </children>
-                                </HBox>
-                                <Label layoutX="340.0" layoutY="26.0" text="Enter Agent Number to See Details" />
-                                <TextField fx:id="txtIndexList" layoutX="359.0" layoutY="50.0" />
-                                <Button layoutX="534.0" layoutY="50.0" mnemonicParsing="false" text="List" />
-                                <TextArea fx:id="txtListDetailAgent" layoutX="242.0" layoutY="88.0" prefHeight="270.0" prefWidth="410.0" />
+                                <HBox prefHeight="391.0" prefWidth="199.0" />
+                        <TableView fx:id="tableViewAdmin" layoutX="192.0" layoutY="14.0" prefHeight="295.0" prefWidth="591.0">
+                          <columns>
+                            <TableColumn fx:id="usernameColumn" prefWidth="111.0" text="User name" />
+                            <TableColumn fx:id="agentIDColumn" prefWidth="119.0" text="Agent ID" />
+                              <TableColumn fx:id="locationColumn" prefWidth="138.0" text="Location" />
+                              <TableColumn fx:id="fullNameColumn" prefWidth="103.0" text="Name" />
+                              <TableColumn fx:id="phoneNumberColumn" prefWidth="123.0" text="Phone Number" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="543.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleDeleteBtn" text="Delete" />
+                        <Button layoutX="469.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleUpdateAgentBtn" text="Update" />
+                        <Button layoutX="399.0" layoutY="328.0" mnemonicParsing="false" onAction="#handleAddAgentBtn" text="Create" />
                             </children>
                         </Pane>
                     </children></HBox>

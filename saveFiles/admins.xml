@@ -2,14 +2,24 @@
   <ApplicationModels.LinkListObjects>
     <first>
       <data class="ApplicationModels.propertyAdmin">
-        <name>Davin Fortune</name>
-        <adminId>WX1234</adminId>
-        <username>davinfortune</username>
+        <name>happy Days</name>
+        <adminId>hap1234</adminId>
+        <username>happyDays</username>
         <password>1234</password>
         <masterAdminPassword>root</masterAdminPassword>
       </data>
+      <next>
+        <data class="ApplicationModels.propertyAdmin">
+          <name>Davin Fortune</name>
+          <adminId>WX1234</adminId>
+          <username>davinfortune</username>
+          <password>1234</password>
+          <masterAdminPassword>root</masterAdminPassword>
+        </data>
+        <outer-class reference="../../.."/>
+      </next>
       <outer-class reference="../.."/>
     </first>
-    <length>1</length>
+    <length>2</length>
   </ApplicationModels.LinkListObjects>
 </object-stream>

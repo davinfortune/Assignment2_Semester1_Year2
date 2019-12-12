@@ -60,7 +60,7 @@ public class AdminController {
             txtUsername.setText("");
             txtPassword.setText("");
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/FXML/homeScreenAgent.fxml"));
+            loader.setLocation(getClass().getResource("/FXML/homeScreenAdmin.fxml"));
             Parent tableViewParent = loader.load();
 
             Scene tableViewScene = new Scene(tableViewParent);

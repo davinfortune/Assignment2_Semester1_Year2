@@ -110,11 +110,28 @@ public class PropertyController implements Initializable {
         int propertyId;
         try {
             propertyId = Integer.parseInt(txtId.getText());
+            LinkListObjects tempPropertys;
+            ArrayList<Property> tempArray = new ArrayList<>();
+            XStream xstream = new XStream(new DomDriver());
+            ObjectInputStream is = xstream.createObjectInputStream
+                    (new FileReader("saveFiles/property.xml"));
+            tempPropertys = (LinkListObjects) is.readObject();
+            is.close();
+            for (int i = 0; i < tempPropertys.size(); i++) {
+                Property forProperty = (Property) tempPropertys.get(i);
+                tempArray.add(forProperty);
             }
-            catch (Exception t) {
-                txtFeedBack.setText("Please enter an Integer");
-                propertyId = Integer.parseInt(null);
+            for (int i = 0; i < tempArray.size(); i++) {
+                if(propertyId == tempArray.get(i).getPropertyId()){
+                    txtFeedBack.setText("ID already taken");
+                    return;
+                }
             }
+        }
+        catch (Exception t) {
+            txtFeedBack.setText("Please enter an Integer");
+            propertyId = Integer.parseInt(null);
+        }
 
             String description = txtDescription.getText();
 

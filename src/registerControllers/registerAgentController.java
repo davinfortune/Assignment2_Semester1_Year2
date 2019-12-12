@@ -2,6 +2,7 @@ package registerControllers;
 
 import ApplicationModels.LinkListObjects;
 import Application.Main;
+import ApplicationModels.Property;
 import ApplicationModels.propertyAgent;
 import MethodModels.agentModel;
 import com.thoughtworks.xstream.XStream;
@@ -10,17 +11,23 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class registerAgentController implements Initializable{
@@ -52,13 +59,67 @@ public class registerAgentController implements Initializable{
             phoneNumber = 0;
         }
 
+        try {
+            LinkListObjects tempPropertys;
+            ArrayList<propertyAgent> tempArray = new ArrayList<>();
+            XStream xstream = new XStream(new DomDriver());
+            ObjectInputStream is = xstream.createObjectInputStream
+                    (new FileReader("saveFiles/agents.xml"));
+            tempPropertys = (LinkListObjects) is.readObject();
+            is.close();
+            for (int i = 0; i < tempPropertys.size(); i++) {
+                propertyAgent forProperty = (propertyAgent) tempPropertys.get(i);
+                tempArray.add(forProperty);
+            }
+            for (int i = 0; i < tempArray.size(); i++) {
+                if(txtAgentID.getText().equals(tempArray.get(i).getAgentId())){
+                    txtAreaFeedback.setText("ID already taken");
+                    return;
+                }
+            }
+        }
+        catch (Exception t) {
+            txtAreaFeedback.setText("Error with id");
+        }
+
+        try {
+            LinkListObjects tempPropertys;
+            ArrayList<propertyAgent> tempArray = new ArrayList<>();
+            XStream xstream = new XStream(new DomDriver());
+            ObjectInputStream is = xstream.createObjectInputStream
+                    (new FileReader("saveFiles/agents.xml"));
+            tempPropertys = (LinkListObjects) is.readObject();
+            is.close();
+            for (int i = 0; i < tempPropertys.size(); i++) {
+                propertyAgent forProperty = (propertyAgent) tempPropertys.get(i);
+                tempArray.add(forProperty);
+            }
+            for (int i = 0; i < tempArray.size(); i++) {
+                if(txtUsername.getText().equals(tempArray.get(i).getUsername())){
+                    txtAreaFeedback.setText("Username already taken");
+                    return;
+                }
+            }
+        }
+        catch (Exception t) {
+            txtAreaFeedback.setText("Error with username");
+        }
+
         if (txtUsername.getText().length() < 4 || txtPassword.getText().length() < 4) {
             txtAreaFeedback.setText("Username and Password need to be 4 characters or more");
         } else if (!txtPassword.getText().equals(txtRepeatPassword.getText())) {
             txtAreaFeedback.setText("Password must match RepeatPassword");
         } else if (addAgent(txtUsername.getText(), txtPassword.getText(), txtAgentID.getText(), locationGeneralSelect.getValue(), txtFullName.getText(), phoneNumber)) {
-            Main.set_pane(2);
-            txtAreaFeedback.setText("Successful Registration");
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/FXML/homeScreenAdmin.fxml"));
+            Parent tableViewParent = loader.load();
+
+            Scene tableViewScene = new Scene(tableViewParent);
+
+            Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+            window.setScene(tableViewScene);
+            window.show();
         }
     }
 
@@ -117,7 +178,16 @@ public class registerAgentController implements Initializable{
 
     public void handleReturnHomeBtn(ActionEvent e) throws Exception
     {
-        Main.set_pane(0);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXML/homeScreenGeneral.fxml"));
+        Parent tableViewParent = loader.load();
+
+        Scene tableViewScene = new Scene(tableViewParent);
+
+        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+
+        window.setScene(tableViewScene);
+        window.show();
     }
 
 }
